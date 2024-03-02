@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import CallbackPage from './components/CallbackPage';
 import React from 'react'
 
 import { SpotifyApiContext } from 'react-spotify-api'
@@ -13,6 +14,7 @@ const App = () => {
   
   return (
     <main>
+      <CallbackPage/>
       <Outlet />
       <div>
         {token ? (

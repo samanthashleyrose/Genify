@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './main.css'
 
 import App from './App.jsx'
-import CallbackPage from './components/CallbackPage';
+
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
@@ -23,12 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: '/Home',
         element: <Home />,
-      },
-      {
-        path: '/CallbackPage',
-        element: <CallbackPage />,
       },
       {
         path: '/Login',
@@ -63,4 +58,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 );
 
 export default App;
-
