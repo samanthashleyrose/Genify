@@ -22,12 +22,12 @@ const startApolloServer = async () => {
   app.use('/graphql', expressMiddleware(server));
 
   // Serve client/build as static assets
-  app.use(express.static(path.join(__dirname, '../client/build')));
+  app.use(express.static(path.join(__dirname, '../client')));
 
   // Define a route handler for the root URL
-  app.get('*', (req, res) => {
+  app.get('/', (req, res) => {
     // Serve the React application's index.html
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../client', 'index.html'));
   });
 
   db.once('open', () => {

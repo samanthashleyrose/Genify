@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import CallbackPage from './components/CallbackPage';
+import CallbackPage from './src/components/CallbackPage';
 import React from 'react'
 
 import { SpotifyApiContext } from 'react-spotify-api'
