@@ -4,7 +4,8 @@
     "description": "Generates playlists for users and using Spotify authorization code to add the playlists to a users account",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "preview": "vite preview --port 8080"
     },
     "author": "Samantha Rose",
     "license": "MIT",
