@@ -1,3 +1,98 @@
-h2 {
-    color: green;
+:root {
+    --background-color: rgb(18, 18, 18);
+    --text-green: rgb(101, 213, 110);
+    --text-black: rgb(18, 18, 18);
+    --text-gray: rgb(179, 179, 179);
+    --input-green: rgba(99, 209, 108, 0.806);
+    --input-gray: rgb(179, 179, 179);
+    --card-gray: rgb(35, 35, 35);
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(18, 18, 18), rgb(35, 35, 35));
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 125vh;
+}
+
+/* TITLE */
+#title {
+    color: var(--text-green);
+    font-family: 'Bungee Inline';
+    font-size: 7rem;
+    margin-bottom: 0%;
+    text-align: center;
+}
+
+#subtitle {
+    color: var(--text-green);
+    font-family: 'MuseoModerno';
+    font-size: 3rem;
+    margin-top: 0%;
+    text-align: center;
+}
+
+/* LOGIN / SIGN-UP / BUTTONS */
+.login-signup-container {
+    align-items: center;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+#h3-title {
+    color: var(--text-green);
+    font-family: 'MuseoModerno';
+    font-size: 2rem;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+#username-input,
+#email-input,
+#pass-input {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1.5rem;
+    font-family: 'MuseoModerno';
+    padding: 1.5%;
+    margin-bottom: 2%;
+    width: 40%;
+}
+
+.btn-container {
+    align-items: center;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+#login,
+#sign-up {
+    background-color: var(--button-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1.5rem;
+    font-family: 'MuseoModerno';
+    padding: 1%;
+    margin-bottom: 1%;
+    width: 20%;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-option {
+    color: var(--text-gray);
+    text-align: center;
+    border-bottom: 2px solid var(--text-gray);
+    max-width: 11%;
 }
