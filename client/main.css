@@ -15,6 +15,7 @@ body {
     min-height: 125vh;
 }
 
+/* TITLE */
 #title {
     color: var(--text-green);
     font-family: 'Bungee Inline';
@@ -29,4 +30,19 @@ body {
     font-size: 3rem;
     margin-top: 0%;
     text-align: center;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-option {
+    color: var(--text-gray);
+    text-align: center;
+    border-bottom: 2px solid var(--text-gray);
+    max-width: 11%;
 }

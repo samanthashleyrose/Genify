@@ -9,6 +9,7 @@ import App from './App.jsx'
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
+import Contact from './pages/Contact';
 import Profile from './pages/Profile';
 import LinkSpotify from './pages/LinkSpotify';
 import CreatePlaylist from './pages/CreatePlaylist';
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '/SignUp',
         element: <SignUp />,
+      },
+      {
+        path: '/Contact',
+        element: <Contact />,
       },
       {
         path: '/Profile',
