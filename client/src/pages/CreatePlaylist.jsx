@@ -10,14 +10,14 @@ export default function Profile() {
             <HeaderwithNav />
             <div className='create-playlist-page'>
                 <h3 className='h3-title'>generate a new playlist</h3>
-                <LinkSpotify />
+                {/* <LinkSpotify /> */}
                 <h4 id='h4-title'>select genres:</h4>
                 <div className='genres-container'>
                     here are the genres
                 </div>
             </div>
             <div className="gen-btn-container">
-                <Link to="/Profile" className={currentPage === '/Profile'}><button id='back-btn'>Back</button></Link>
+                <Link to="/Home" className={currentPage === '/Home'}><button id='back-btn'>Back</button></Link>
                 <Link to="/ChooseArtist" className={currentPage === '/ChooseArtist'}><button id='next-btn'>Next</button></Link>
             </div>
         </div>

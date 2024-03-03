@@ -122,7 +122,7 @@ body {
     width: 20%;
 }
 
-/* PROFILE */
+/* HOME */
 #welcome-msg {
     color: var(--text-green);
     font-family: 'MuseoModerno';
@@ -130,7 +130,6 @@ body {
     margin-bottom: 2%;
     text-align: center;
 }
-
 
 #view-playlists,
 #gen-playlist {
@@ -143,6 +142,56 @@ body {
     padding: 1%;
     margin-bottom: 2%;
     width: 50%;
+}
+
+#unlink-spotify-btn {
+    background-color: none;
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding: 1%;
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+/* VIEW PLAYLISTS */
+.view-playlist-page {
+    text-align: center;
+}
+
+.genify-playlists-container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.playlist-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--card-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    margin-bottom: 3%;
+    width: 100%;
+}
+
+.playlist-name {
+    color: var(--text-gray);
+    margin-left: 3%;
+}
+
+.playlist-img {
+    padding: 2%;
+    margin-left: 1%;
+    width: 10%;
 }
 
 /* CREATE PLAYLIST */

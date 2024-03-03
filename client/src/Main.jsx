@@ -11,7 +11,7 @@ import Entrance from './pages/Entrance';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import CreatePlaylist from './pages/CreatePlaylist';
-// import ViewPlaylists from './pages/ViewPlaylists';
+import ViewPlaylists from './pages/ViewPlaylists';
 
 const router = createBrowserRouter([
   {
@@ -42,10 +42,10 @@ const router = createBrowserRouter([
         path: '/CreatePlaylist',
         element: <CreatePlaylist />,
       },
-      // {
-      //   path: '/ViewPlaylists',
-      //   element: <ViewPlaylists />,
-      // },
+      {
+        path: '/ViewPlaylists',
+        element: <ViewPlaylists />,
+      },
     ],
   },
 ]);
