@@ -6,9 +6,9 @@
     "license": "MIT",
     "main": "server/server.js",
     "scripts": {
-        "start": "nodemon server.js && npx vite",
+        "start": "nodemon server.js && cd client && npm run dev",
         "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
-        "build": "cd client && npm run build"
+        "build": "cd client && npm run build && npm run dev"
     },
     "dependencies": {
         "@apollo/server": "^4.7.1",

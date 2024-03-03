@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App'
+import './main.css'
 
+import App from './App'
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Entrance from './pages/Entrance';
@@ -30,26 +31,26 @@ const router = createBrowserRouter([
         path: '/SignUp',
         element: <SignUp />,
       },
-      {
-        path: '/Contact',
-        element: <Contact />,
-      },
-      {
-        path: '/Profile',
-        element: <Profile />,
-      },
-      {
-        path: '/LinkSpotify',
-        element: <LinkSpotify />,
-      },
-      {
-        path: '/CreatePlaylist',
-        element: <CreatePlaylist />,
-      },
-      {
-        path: '/ViewPlaylists',
-        element: <ViewPlaylists />,
-      },
+      // {
+      //   path: '/Contact',
+      //   element: <Contact />,
+      // },
+      // {
+      //   path: '/Profile',
+      //   element: <Profile />,
+      // },
+      // {
+      //   path: '/LinkSpotify',
+      //   element: <LinkSpotify />,
+      // },
+      // {
+      //   path: '/CreatePlaylist',
+      //   element: <CreatePlaylist />,
+      // },
+      // {
+      //   path: '/ViewPlaylists',
+      //   element: <ViewPlaylists />,
+      // },
     ],
   },
 ]);
