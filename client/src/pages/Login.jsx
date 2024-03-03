@@ -5,7 +5,7 @@ export default function Login() {
         <div>
             <Title />
             <div class="login-signup-container">
-                <h3 id="h3-title">login</h3>
+                <h3 className="h3-title">login</h3>
                 <form id="login-form">
                     <input id="email-input" type="text" placeholder="email" name="email" autocomplete="off" />
                     <br />

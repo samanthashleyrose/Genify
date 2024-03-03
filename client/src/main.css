@@ -5,7 +5,7 @@
     --text-gray: rgb(179, 179, 179);
     --input-green: rgba(99, 209, 108, 0.806);
     --input-gray: rgb(179, 179, 179);
-    --card-gray: rgb(35, 35, 35);
+    --card-gray: rgba(108, 106, 106, 0.74);
 }
 
 body {
@@ -36,13 +36,14 @@ body {
 .header-nav-container {
     display: inline-flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .titles-container {
     display: block;
-    margin-left: 3%;
     text-align: left;
 }
 
@@ -68,8 +69,8 @@ body {
     font-size: 1rem;
     font-family: 'MuseoModerno';
     height: 10%;
-    padding: 1%;
-    margin-right: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 /* LOGIN / SIGN-UP / BUTTONS */
@@ -80,7 +81,7 @@ body {
     text-align: center;
 }
 
-#h3-title {
+.h3-title {
     color: var(--text-green);
     font-family: 'MuseoModerno';
     font-size: 2rem;
@@ -105,7 +106,6 @@ body {
 .btn-container {
     align-items: center;
     display: block;
-    justify-content: center;
     text-align: center;
 }
 
@@ -131,14 +131,8 @@ body {
     text-align: center;
 }
 
-#link-spotify-container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 2%;
-}
 
-#view-playlist,
+#view-playlists,
 #gen-playlist {
     background-color: var(--input-green);
     border-style: none;
@@ -151,6 +145,90 @@ body {
     width: 50%;
 }
 
+/* CREATE PLAYLIST */
+.create-playlist-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#link-spotify-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+#h4-title {
+    color: var(--text-green);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+.genres-container {
+    background-color: var(--card-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding: 1.5%;
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+.gen-btn-container {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+#back-btn,
+#next-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
+/* CONTACT */
+#contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#contact-info {
+    background-color: var(--card-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding: 1.5%;
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+#a-2 {
+    color: var(--text-black);
+    text-decoration: none;
+}
+
 /* FOOTER */
 footer {
     display: flex;
@@ -159,9 +237,9 @@ footer {
     text-align: center;
 }
 
-.footer-option {
-    color: var(--text-gray);
-    text-align: center;
+#footer-option {
     border-bottom: 2px solid var(--text-gray);
-    max-width: 11%;
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    text-align: center;
 }

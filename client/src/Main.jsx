@@ -8,10 +8,9 @@ import App from './App'
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Entrance from './pages/Entrance';
-// import Contact from './pages/Contact';
-import Profile from './pages/Profile';
-// import LinkSpotify from './pages/LinkSpotify';
-// import CreatePlaylist from './pages/CreatePlaylist';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import CreatePlaylist from './pages/CreatePlaylist';
 // import ViewPlaylists from './pages/ViewPlaylists';
 
 const router = createBrowserRouter([
@@ -31,22 +30,18 @@ const router = createBrowserRouter([
         path: '/SignUp',
         element: <SignUp />,
       },
-      // {
-      //   path: '/Contact',
-      //   element: <Contact />,
-      // },
       {
-        path: '/Profile',
-        element: <Profile />,
+        path: '/Contact',
+        element: <Contact />,
       },
-      // {
-      //   path: '/LinkSpotify',
-      //   element: <LinkSpotify />,
-      // },
-      // {
-      //   path: '/CreatePlaylist',
-      //   element: <CreatePlaylist />,
-      // },
+      {
+        path: '/Home',
+        element: <Home />,
+      },
+      {
+        path: '/CreatePlaylist',
+        element: <CreatePlaylist />,
+      },
       // {
       //   path: '/ViewPlaylists',
       //   element: <ViewPlaylists />,

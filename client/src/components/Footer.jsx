@@ -5,13 +5,10 @@ function Footer() {
 
     return (
         <footer>
-            <p className="footer-option">
-                <Link
-                    to="/"
-                    className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}>
-                    Contact Us
-                </Link>
-            </p>
+            <Link
+                to="/Contact"
+                className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}>
+                <p id="footer-option">Contact Us</p></Link>
         </footer>
     );
 }
