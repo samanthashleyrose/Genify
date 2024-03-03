@@ -7,11 +7,11 @@ import App from './App'
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Profile from './pages/Profile';
-import LinkSpotify from './pages/LinkSpotify';
-import CreatePlaylist from './pages/CreatePlaylist';
-import ViewPlaylists from './pages/ViewPlaylists';
+// import Contact from './pages/Contact';
+// import Profile from './pages/Profile';
+// import LinkSpotify from './pages/LinkSpotify';
+// import CreatePlaylist from './pages/CreatePlaylist';
+// import ViewPlaylists from './pages/ViewPlaylists';
 
 const router = createBrowserRouter([
   {

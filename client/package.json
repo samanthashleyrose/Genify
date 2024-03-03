@@ -1,7 +1,7 @@
 {
-    "name": "playlist-generator",
+    "name": "client",
     "version": "1.0.0",
-    "description": "Generates playlists for users and using Spotify authorization code to add the playlists to a users account",
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
@@ -20,7 +20,9 @@
         "react-spotify-api": "^3.0.0"
     },
     "devDependencies": {
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
         "@vitejs/plugin-react": "^4.0.0",
-        "vite": "^4.3.2"
+        "vite": "^4.5.2"
     }
 }
