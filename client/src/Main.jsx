@@ -6,7 +6,7 @@ import App from './App'
 
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import Home from './pages/Home';
+import Entrance from './pages/Entrance';
 // import Contact from './pages/Contact';
 // import Profile from './pages/Profile';
 // import LinkSpotify from './pages/LinkSpotify';
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Entrance />,
       },
       {
         path: '/Login',
