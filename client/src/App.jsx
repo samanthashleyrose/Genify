@@ -1,18 +1,3 @@
-// import { Outlet } from 'react-router-dom';
-// import Footer from './components/Footer';
-// import React from 'react'
-
-// const App = () => {
-//   return (
-//     <main>
-//       <Outlet />
-//       <Footer />
-//     </main>
-//   )
-// }
-
-// export default App;
-
 import { Outlet } from "react-router-dom";
 import Cookies from 'js-cookie'
 import { SpotifyApiContext } from "react-spotify-api";
