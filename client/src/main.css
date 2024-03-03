@@ -32,6 +32,46 @@ body {
     text-align: center;
 }
 
+/* TITLE w NAV / BUTTONS */
+.header-nav-container {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.titles-container {
+    display: block;
+    margin-left: 3%;
+    text-align: left;
+}
+
+#sm-title {
+    color: var(--text-green);
+    font-family: 'Bungee Inline';
+    font-size: 3rem;
+    margin-bottom: 0%;
+}
+
+#sm-subtitle {
+    color: var(--text-green);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-top: 0%;
+}
+
+#home {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    height: 10%;
+    padding: 1%;
+    margin-right: 3%;
+}
+
 /* LOGIN / SIGN-UP / BUTTONS */
 .login-signup-container {
     align-items: center;
@@ -71,7 +111,7 @@ body {
 
 #login,
 #sign-up {
-    background-color: var(--button-green);
+    background-color: var(--input-green);
     border-style: none;
     border-radius: 5px;
     color: var(--text-black);
@@ -80,6 +120,35 @@ body {
     padding: 1%;
     margin-bottom: 1%;
     width: 20%;
+}
+
+/* PROFILE */
+#welcome-msg {
+    color: var(--text-green);
+    font-family: 'MuseoModerno';
+    font-size: 2rem;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+#link-spotify-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#view-playlist,
+#gen-playlist {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1.5rem;
+    font-family: 'MuseoModerno';
+    padding: 1%;
+    margin-bottom: 2%;
+    width: 50%;
 }
 
 /* FOOTER */

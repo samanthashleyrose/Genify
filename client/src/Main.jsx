@@ -9,7 +9,7 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Entrance from './pages/Entrance';
 // import Contact from './pages/Contact';
-// import Profile from './pages/Profile';
+import Profile from './pages/Profile';
 // import LinkSpotify from './pages/LinkSpotify';
 // import CreatePlaylist from './pages/CreatePlaylist';
 // import ViewPlaylists from './pages/ViewPlaylists';
@@ -35,10 +35,10 @@ const router = createBrowserRouter([
       //   path: '/Contact',
       //   element: <Contact />,
       // },
-      // {
-      //   path: '/Profile',
-      //   element: <Profile />,
-      // },
+      {
+        path: '/Profile',
+        element: <Profile />,
+      },
       // {
       //   path: '/LinkSpotify',
       //   element: <LinkSpotify />,
