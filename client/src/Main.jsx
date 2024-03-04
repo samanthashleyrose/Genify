@@ -12,6 +12,8 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import CreatePlaylist from './pages/CreatePlaylist';
 import ViewPlaylists from './pages/ViewPlaylists';
+import SelectGenres from './pages/SelectGenres';
+import SelectArtists from './pages/SelectArtists';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
       {
         path: '/ViewPlaylists',
         element: <ViewPlaylists />,
+      },
+      {
+        path: '/SelectGenres',
+        element: <SelectGenres />,
+      },
+      {
+        path: '/SelectArtists',
+        element: <SelectArtists />,
       },
     ],
   },

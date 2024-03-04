@@ -194,6 +194,15 @@ body {
     width: 10%;
 }
 
+/* SELECT GENRE */
+.select-genre-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 /* CREATE PLAYLIST */
 .create-playlist-page {
     display: flex;
@@ -201,6 +210,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-top: 15%;
 }
 
 #link-spotify-container {
@@ -210,13 +220,14 @@ body {
     margin-bottom: 2%;
 }
 
-#h4-title {
-    color: var(--text-green);
+.instructions {
+    color: var(--text-gray);
     font-family: 'MuseoModerno';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 2%;
     margin-top: 0%;
     text-align: center;
+    width: 70%;
 }
 
 .genres-container {

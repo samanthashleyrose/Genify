@@ -1,24 +1,19 @@
-import HeaderwithNav from '../components/TitlewithNav';
+import TitlewithNav from '../components/TitlewithNav';
 import LinkSpotify from '../components/LinkSpotify';
 import { Link, useLocation } from 'react-router-dom';
 
-export default function Profile() {
+export default function CreatePlaylist() {
     const currentPage = useLocation().pathname;
 
     return (
         <div>
-            <HeaderwithNav />
+            <TitlewithNav />
             <div className='create-playlist-page'>
                 <h3 className='h3-title'>generate a new playlist</h3>
-                {/* <LinkSpotify /> */}
-                <h4 id='h4-title'>select genres:</h4>
-                <div className='genres-container'>
-                    here are the genres
-                </div>
+                <h4 className='instructions'>To generate a new playlist, we have to gather some information about your interests. Let's get started!</h4>
             </div>
-            <div className="gen-btn-container">
-                <Link to="/Home" className={currentPage === '/Home'}><button id='back-btn'>Back</button></Link>
-                <Link to="/ChooseArtist" className={currentPage === '/ChooseArtist'}><button id='next-btn'>Next</button></Link>
+            <div className="btn-container">
+                <Link to="/SelectGenres" className={currentPage === '/SelectGenres'}><button id='gen-playlist'>create a playlist</button></Link>
             </div>
         </div>
     );
