@@ -63,7 +63,11 @@ export default function SelectArtists() {
             <div className='select-artists-page'>
                 <h3 className='h3-title'>Select Artists</h3>
                 <form action="">
-                    <input type="text" placeholder="Search artists" value={searchInput} onChange={handleSearchChange} />
+                    <input
+                        type="text"
+                        placeholder="Search artists"
+                        value={searchInput}
+                        onChange={handleSearchChange} />
                     <ul id='artists-container'>
                         {searchResults.map(artist => (
                             <p

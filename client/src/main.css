@@ -321,6 +321,60 @@ body {
     text-align: center;
 }
 
+/* NAME PLAYLIST */
+.select-name-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 8%;
+}
+
+#enter-name {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1.2rem;
+    font-family: 'MuseoModerno';
+    padding: .5%;
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+#playlist-name {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+#name-btn-container {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+#add-name-btn,
+#random-name-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
 /* CREATE PLAYLIST */
 .create-playlist-page {
     display: flex;
@@ -364,6 +418,7 @@ body {
     display: block;
     justify-content: center;
     text-align: center;
+    width: 96.5%;
 }
 
 #back-btn,
