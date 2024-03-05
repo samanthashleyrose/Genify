@@ -83,7 +83,6 @@ export default function SelectArtists() {
                             </p>
                         ))}
                     </ul>
-                    <button type="button" id='include-artist-btn'>Include Artist</button>
                     <div id='selected-artists-container'>
                         <h4 id="h4-selected-artists">Selected Artists</h4>
                         {selectedArtists.map(artist => (
