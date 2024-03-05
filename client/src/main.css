@@ -376,6 +376,31 @@ body {
 }
 
 /* GENERATE PLAYLIST */
+.generate-playlist-page {
+    text-align: center;
+}
+
+.playlists-container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.generated-playlist {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--card-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    margin-bottom: 0%;
+}
+
 .p-title {
     color: var(--text-gray);
     font-family: 'MuseoModerno';
