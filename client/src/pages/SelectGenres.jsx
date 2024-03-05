@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import HeaderwithNav from '../components/TitlewithNav';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function SelectGenres() {
-    const currentPage = useLocation().pathname;
-
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"));
 
     // State to store genre options
@@ -61,8 +59,8 @@ export default function SelectGenres() {
                 </ul>
             </div>
             <div className="gen-btn-container">
-                <Link to="/CreatePlaylist" className={currentPage === '/CreatePlaylist'}><button id='back-btn'>Back</button></Link>
-                <Link to="/SelectArtists" className={currentPage === '/SelectArtists'}><button id='next-btn'>Next</button></Link>
+                <Link to="/CreatePlaylist"><button id='back-btn'>Back</button></Link>
+                <Link to="/SelectArtists"><button id='next-btn'>Next</button></Link>
             </div>
         </div>
     );

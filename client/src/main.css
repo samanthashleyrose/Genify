@@ -307,6 +307,20 @@ body {
     background-color: var(--input-green);
 }
 
+/* SONG COUNT */
+#range {
+    width: 30%;
+}
+
+#song-count {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
 /* CREATE PLAYLIST */
 .create-playlist-page {
     display: flex;

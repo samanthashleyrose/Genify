@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import HeaderwithNav from '../components/TitlewithNav';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function SelectArtists() {
-    const currentPage = useLocation().pathname;
-
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"));
 
     // State to store search input
@@ -87,8 +85,8 @@ export default function SelectArtists() {
                 </form>
             </div>
             <div className="gen-btn-container">
-                <Link to="/SelectArtists"><button id='back-btn'>Back</button></Link>
-                <Link to="/SelectSongCount" className={currentPage === '/SelectSongCount'}><button id='next-btn'>Next</button></Link>
+                <Link to="/SelectGenres"><button id='back-btn'>Back</button></Link>
+                <Link to="/SelectSongCount"><button id='next-btn'>Next</button></Link>
             </div>
         </div>
     );
