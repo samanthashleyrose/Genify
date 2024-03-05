@@ -227,6 +227,86 @@ body {
     background-color: var(--input-green);
 }
 
+/* SELECT ARTIST */
+.select-artists-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 8%;
+}
+
+#artists-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 0%;
+}
+
+.artist-option {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    margin-right: 1%;
+}
+
+#include-artist-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
+#selected-artists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 0%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#h4-selected-artists {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+.included-artist {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    margin-right: 1%;
+    width: 100%;
+}
+
+.selected {
+    background-color: var(--input-green);
+}
+
 /* CREATE PLAYLIST */
 .create-playlist-page {
     display: flex;
