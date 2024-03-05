@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import HeaderwithNav from '../components/TitlewithNav';
+import { PlaylistContext } from '../pages/PlaylistContext';
 import { Link } from 'react-router-dom';
 
-export default function SelectArtists() {
+export default function SelectPlaylistName() {
+    const { playlistData, setPlaylistData } = useContext(PlaylistContext);
+
     // State to store the selected number of songs
     const [playlistName, setPlaylistName] = useState('');
 
@@ -14,12 +17,14 @@ export default function SelectArtists() {
     // Function to add a name to the playlist
     const addName = () => {
         console.log('Playlist name:', playlistName);
+        setPlaylistData({ ...playlistData, playlistName });
     };
 
     // Function to generate a random name for the playlist
     const generateRandomName = () => {
         const randomName = 'Random Playlist';
         setPlaylistName(randomName);
+        setPlaylistData({ ...playlistData, playlistName: randomName });
     };
 
     return (
@@ -42,7 +47,7 @@ export default function SelectArtists() {
             </div>
             <div className="gen-btn-container">
                 <Link to="/SelectSongCount"><button id='back-btn'>Back</button></Link>
-                <Link to="/GeneratePlaylist"><button id='next-btn'>Next</button></Link>
+                <Link to="/GeneratePlaylist"><button id='next-btn'>Generate Playlist</button></Link>
             </div>
         </div>
     );

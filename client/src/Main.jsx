@@ -16,6 +16,7 @@ import SelectGenres from './pages/SelectGenres';
 import SelectArtists from './pages/SelectArtists';
 import SelectSongCount from './pages/SelectSongCount';
 import SelectPlaylistName from './pages/SelectPlaylistName';
+import GeneratePlaylist from './pages/GeneratePlaylist';
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: '/SelectPlaylistName',
         element: <SelectPlaylistName />,
+      },
+      {
+        path: '/GeneratePlaylist',
+        element: <GeneratePlaylist />,
       },
     ],
   },

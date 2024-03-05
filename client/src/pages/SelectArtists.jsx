@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import HeaderwithNav from '../components/TitlewithNav';
+import { PlaylistContext } from '../pages/PlaylistContext';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function SelectArtists() {
+    const { playlistData, setPlaylistData } = useContext(PlaylistContext);
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"));
 
     // State to store search input
@@ -42,11 +44,13 @@ export default function SelectArtists() {
                 setSelectedArtists([...selectedArtists, artist]);
             } // Add Else to show a message or alert indicating that the user cannot select more than 15 artists
         }
+        setPlaylistData({ ...playlistData, artists: selectedArtists });
     };
 
     // Function to remove artist
     const removeArtist = (artist) => {
         setSelectedArtists(selectedArtists.filter(selected => selected.id !== artist.id));
+        setPlaylistData({ ...playlistData, artists: selectedArtists });
     };
 
     useEffect(() => {

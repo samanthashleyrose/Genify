@@ -375,6 +375,30 @@ body {
     margin-right: .5%;
 }
 
+/* GENERATE PLAYLIST */
+.p-title {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+#link-to-spotify-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
 /* CREATE PLAYLIST */
 .create-playlist-page {
     display: flex;

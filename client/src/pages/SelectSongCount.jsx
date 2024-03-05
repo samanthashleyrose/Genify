@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import HeaderwithNav from '../components/TitlewithNav';
 import { Link } from 'react-router-dom';
 
-export default function SelectArtists() {
+export default function SelectSongCount() {
     // State to store the selected number of songs
     const [songCount, setSongCount] = useState(5);
 

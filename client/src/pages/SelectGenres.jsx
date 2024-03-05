@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import HeaderwithNav from '../components/TitlewithNav';
+import { PlaylistContext } from '../pages/PlaylistContext';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function SelectGenres() {
+    const { playlistData, setPlaylistData } = useContext(PlaylistContext);
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"));
 
     // State to store genre options
@@ -29,7 +31,7 @@ export default function SelectGenres() {
         };
 
         fetchGenres();
-    }, []);
+    }, [token, setPlaylistData]);
 
     // Function to handle genre selection
     const handleGenreSelection = (genre) => {
@@ -38,6 +40,7 @@ export default function SelectGenres() {
         } else {
             setSelectedGenres([...selectedGenres, genre]);
         }
+        setPlaylistData({ ...playlistData, genres: selectedGenres });
     };
 
     return (

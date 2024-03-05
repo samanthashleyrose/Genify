@@ -3,6 +3,7 @@ import Cookies from 'js-cookie'
 import { SpotifyApiContext } from "react-spotify-api";
 import Footer from "./components/Footer";
 import React, { createContext, useContext } from "react";
+import { PlaylistProvider } from './pages/PlaylistContext';
 
 const tokenContext = createContext();
 
@@ -20,10 +21,12 @@ const TokenProvider = (props) => {
 const App = () => {
   return (
     <TokenProvider>
+      <PlaylistProvider>
       <main>
         <Outlet />
         <Footer />
       </main>
+      </PlaylistProvider>
     </TokenProvider>
   );
 };
