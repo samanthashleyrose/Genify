@@ -122,7 +122,7 @@ body {
     width: 20%;
 }
 
-/* PROFILE */
+/* HOME */
 #welcome-msg {
     color: var(--text-green);
     font-family: 'MuseoModerno';
@@ -130,7 +130,6 @@ body {
     margin-bottom: 2%;
     text-align: center;
 }
-
 
 #view-playlists,
 #gen-playlist {
@@ -145,6 +144,261 @@ body {
     width: 50%;
 }
 
+#unlink-spotify-btn {
+    background-color: none;
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding: 1%;
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+/* VIEW PLAYLISTS */
+.view-playlist-page {
+    text-align: center;
+}
+
+.genify-playlists-container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.playlist-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--card-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    margin-bottom: 3%;
+    width: 100%;
+}
+
+.playlist-name {
+    color: var(--text-gray);
+    margin-left: 3%;
+}
+
+.playlist-img {
+    padding: 2%;
+    margin-left: 1%;
+    width: 10%;
+}
+
+/* SELECT GENRE */
+.select-genre-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 8%;
+}
+
+#genres-container {
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 0%;
+}
+
+.genre-option {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    margin-right: 1%;
+}
+
+.selected {
+    background-color: var(--input-green);
+}
+
+/* SELECT ARTIST */
+.select-artists-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 8%;
+}
+
+#artists-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 0%;
+}
+
+.artist-option {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    margin-right: 1%;
+}
+
+#include-artist-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
+#selected-artists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 0%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#h4-selected-artists {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+.included-artist {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    margin-right: 1%;
+    width: 100%;
+}
+
+.selected {
+    background-color: var(--input-green);
+}
+
+/* SONG COUNT */
+#range {
+    width: 30%;
+}
+
+#song-count {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+/* NAME PLAYLIST */
+.select-name-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 8%;
+}
+
+#enter-name {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1.2rem;
+    font-family: 'MuseoModerno';
+    padding: .5%;
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+#playlist-name {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+#name-btn-container {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+#add-name-btn,
+#random-name-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
+/* GENERATE PLAYLIST */
+.p-title {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+#link-to-spotify-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
 /* CREATE PLAYLIST */
 .create-playlist-page {
     display: flex;
@@ -152,6 +406,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-top: 15%;
 }
 
 #link-spotify-container {
@@ -161,13 +416,14 @@ body {
     margin-bottom: 2%;
 }
 
-#h4-title {
-    color: var(--text-green);
+.instructions {
+    color: var(--text-gray);
     font-family: 'MuseoModerno';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 2%;
     margin-top: 0%;
     text-align: center;
+    width: 70%;
 }
 
 .genres-container {
@@ -186,6 +442,7 @@ body {
     display: block;
     justify-content: center;
     text-align: center;
+    width: 96.5%;
 }
 
 #back-btn,

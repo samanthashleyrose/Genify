@@ -11,7 +11,12 @@ import Entrance from './pages/Entrance';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import CreatePlaylist from './pages/CreatePlaylist';
-// import ViewPlaylists from './pages/ViewPlaylists';
+import ViewPlaylists from './pages/ViewPlaylists';
+import SelectGenres from './pages/SelectGenres';
+import SelectArtists from './pages/SelectArtists';
+import SelectSongCount from './pages/SelectSongCount';
+import SelectPlaylistName from './pages/SelectPlaylistName';
+import GeneratePlaylist from './pages/GeneratePlaylist';
 
 const router = createBrowserRouter([
   {
@@ -42,10 +47,30 @@ const router = createBrowserRouter([
         path: '/CreatePlaylist',
         element: <CreatePlaylist />,
       },
-      // {
-      //   path: '/ViewPlaylists',
-      //   element: <ViewPlaylists />,
-      // },
+      {
+        path: '/ViewPlaylists',
+        element: <ViewPlaylists />,
+      },
+      {
+        path: '/SelectGenres',
+        element: <SelectGenres />,
+      },
+      {
+        path: '/SelectArtists',
+        element: <SelectArtists />,
+      },
+      {
+        path: '/SelectSongCount',
+        element: <SelectSongCount />,
+      },
+      {
+        path: '/SelectPlaylistName',
+        element: <SelectPlaylistName />,
+      },
+      {
+        path: '/GeneratePlaylist',
+        element: <GeneratePlaylist />,
+      },
     ],
   },
 ]);
