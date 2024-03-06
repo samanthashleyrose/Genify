@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import HeaderwithNav from '../components/TitlewithNav';
+import { PlaylistContext } from '../pages/PlaylistContext';
 import { Link } from 'react-router-dom';
 
 export default function SelectSongCount() {
+    const { playlistData, setPlaylistData } = useContext(PlaylistContext);
+
     // State to store the selected number of songs
-    const [songCount, setSongCount] = useState(5);
+    const [songCount, setSongCount] = useState();
 
     // Function to handle changes in the song count
     const handleSongCountChange = (event) => {
-        setSongCount(parseInt(event.target.value));
+        const count = parseInt(event.target.value);
+        setSongCount(count);
+        setPlaylistData({ ...playlistData, songCount: count });
     };
 
     return (

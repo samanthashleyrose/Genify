@@ -42,15 +42,15 @@ export default function SelectArtists() {
         if (!selectedArtists.includes(artist)) {
             if (selectedArtists.length < 16) {
                 setSelectedArtists([...selectedArtists, artist]);
+                setPlaylistData({ ...playlistData, artists: [...playlistData.artists, artist] });
             } // Add Else to show a message or alert indicating that the user cannot select more than 15 artists
         }
-        setPlaylistData({ ...playlistData, artists: selectedArtists });
     };
 
     // Function to remove artist
     const removeArtist = (artist) => {
         setSelectedArtists(selectedArtists.filter(selected => selected.id !== artist.id));
-        setPlaylistData({ ...playlistData, artists: selectedArtists });
+        setPlaylistData({ ...playlistData, artists: playlistData.artists.filter(selected => selected.id !== artist.id) });
     };
 
     useEffect(() => {
@@ -83,7 +83,6 @@ export default function SelectArtists() {
                             </p>
                         ))}
                     </ul>
-                    <button type="button" id='include-artist-btn'>Include Artist</button>
                     <div id='selected-artists-container'>
                         <h4 id="h4-selected-artists">Selected Artists</h4>
                         {selectedArtists.map(artist => (
