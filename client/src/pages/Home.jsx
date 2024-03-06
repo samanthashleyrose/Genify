@@ -1,4 +1,5 @@
 import TitlewithNav from '../components/TitlewithNav';
+import Message from '../components/Message'
 import LinkSpotify from '../components/LinkSpotify';
 import { Link, useLocation } from 'react-router-dom';
 

@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function GeneratePlaylist() {
-    
+
     const [token] = React.useState(Cookies.get("spotifyAuthToken"));
     const { playlistData } = useContext(PlaylistContext);
-    console.log(playlistData);
     const [playlist, setPlaylist] = useState();
 
     // Retrieves connected user's Spotify username
@@ -40,6 +39,11 @@ export default function GeneratePlaylist() {
         });
         const data = await response.json();
         console.log('API Response:', data);
+
+        // Log playlist name and its added tracks
+        const playlistInfo = `Generated Playlist\n-----------\nPlaylist Name: ${playlistData.playlistName}\n-----------\nSongs(Tracks): ${data.tracks.map(track => track.name).join(', ')}`;
+        console.log(playlistInfo);
+        
         return data.tracks;
     };
 
@@ -83,7 +87,6 @@ export default function GeneratePlaylist() {
 
             // Update the UI with the generated playlist details
             setPlaylist(playlistDataResponse);
-            console.log(playlistDataResponse);
         } catch (error) {
             console.error('Error generating playlist:', error);
         }
@@ -93,6 +96,7 @@ export default function GeneratePlaylist() {
     useEffect(() => {
         generatePlaylist();
     }, [token, playlistData]);
+
 
     return (
         <div>
@@ -113,7 +117,6 @@ export default function GeneratePlaylist() {
                 <p className='p-title'>genres: {playlistData.genres.join(', ')}</p>
                 <p className='p-title'>artists: {playlistData.artists.map(artist => artist.name).join(', ')}</p>
                 <p className='p-title'>{playlistData.songCount} songs</p>
-                <p className='p-title'>{playlistData.playlistName}</p>
             </div>
         </div>
     );
