@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function SelectGenres() {
-    const { playlistData, setPlaylistData } = useContext(PlaylistContext);
+    const { playlistData, setPlaylistData, remainingSelections, setRemainingSelections } = useContext(PlaylistContext);
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"));
 
     // State to store genre options
@@ -38,12 +38,14 @@ export default function SelectGenres() {
         if (selectedGenres.includes(genre)) {
             setSelectedGenres(selectedGenres.filter(item => item !== genre));
             setPlaylistData({ ...playlistData, genres: playlistData.genres.filter(item => item !== genre) });
+            // selected value countdown
+            setRemainingSelections(remainingSelections + 1);
         } else {
             setSelectedGenres([...selectedGenres, genre]);
             setPlaylistData({ ...playlistData, genres: [...playlistData.genres, genre] });
+            // selected value countdown
+            setRemainingSelections(remainingSelections - 1);
         }
-        // console.log(playlistData);
-        // setPlaylistData({ ...playlistData, genres: [...selectedGenres] });
     };
 
     return (
@@ -51,6 +53,7 @@ export default function SelectGenres() {
             <HeaderwithNav />
             <div className='select-genre-page'>
                 <h3 className='h3-title'>generate a new playlist</h3>
+                <h4 className='countdown'>Remaining Selections: {remainingSelections}</h4>
                 <h4 className='instructions'>select genres:</h4>
                 <ul id='genres-container'>
                     {genres.map(genre => (

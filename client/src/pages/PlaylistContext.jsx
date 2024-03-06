@@ -10,13 +10,15 @@ export const PlaylistProvider = ({ children }) => {
         songCount: null
     });
 
+    const [remainingSelections, setRemainingSelections] = useState(5);
+
     const setPlayListLeeWants = (data) => {
         setPlaylistData(data)
         console.log(data);
-    }
+    };
 
     return (
-        <PlaylistContext.Provider value={{ playlistData, setPlaylistData : setPlayListLeeWants }}>
+        <PlaylistContext.Provider value={{ playlistData, setPlaylistData : setPlayListLeeWants, remainingSelections, setRemainingSelections}}>
             {children}
         </PlaylistContext.Provider>
     );

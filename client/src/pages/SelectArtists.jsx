@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function SelectArtists() {
-    const { playlistData, setPlaylistData } = useContext(PlaylistContext);
+    const { playlistData, setPlaylistData, remainingSelections, setRemainingSelections } = useContext(PlaylistContext);
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"));
 
     // State to store search input
@@ -43,6 +43,8 @@ export default function SelectArtists() {
             if (selectedArtists.length < 16) {
                 setSelectedArtists([...selectedArtists, artist]);
                 setPlaylistData({ ...playlistData, artists: [...playlistData.artists, artist] });
+                // selected value countdown
+                setRemainingSelections(remainingSelections - 1);
             }
         }
     };
@@ -51,6 +53,8 @@ export default function SelectArtists() {
     const removeArtist = (artist) => {
         setSelectedArtists(selectedArtists.filter(selected => selected.id !== artist.id));
         setPlaylistData({ ...playlistData, artists: playlistData.artists.filter(selected => selected.id !== artist.id) });
+        // selected value countdown
+        setRemainingSelections(remainingSelections + 1);
     };
 
     useEffect(() => {
@@ -66,12 +70,14 @@ export default function SelectArtists() {
             <HeaderwithNav />
             <div className='select-artists-page'>
                 <h3 className='h3-title'>Select Artists</h3>
-                <form action="">
+                <h4 className='countdown'>Remaining Selections: {remainingSelections}</h4>
+                <form>
                     <input
                         type="text"
                         placeholder="Search artists"
                         value={searchInput}
-                        onChange={handleSearchChange} />
+                        onChange={handleSearchChange} 
+                        id='artist-input'/>
                     <ul id='artists-container'>
                         {searchResults.map(artist => (
                             <p

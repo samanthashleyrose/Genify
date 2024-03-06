@@ -205,6 +205,15 @@ body {
     margin-right: 8%;
 }
 
+.countdown {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+}
+
 #genres-container {
     display: inline-flex;
     justify-content: space-evenly;
@@ -245,6 +254,19 @@ body {
     margin-top: 0%;
 }
 
+#artist-input {
+    background-color: var(--input-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1.2rem;
+    font-family: 'MuseoModerno';
+    padding: .5%;
+    margin-bottom: 2%;
+    width: 70%;
+    text-align: center;
+}
+
 .artist-option {
     background-color: var(--input-gray);
     border-style: none;
@@ -280,7 +302,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 
 #h4-selected-artists {
     color: var(--text-gray);
