@@ -401,6 +401,7 @@ body {
     margin-bottom: 0%;
 }
 
+#loading,
 .p-title {
     color: var(--text-gray);
     font-family: 'MuseoModerno';
