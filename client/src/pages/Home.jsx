@@ -10,9 +10,9 @@ export default function Profile() {
             <TitlewithNav />
             <h3 className='h3-title'>Welcome, user</h3>
             <div className="btn-container">
-                <Link to="/ViewPlaylists" className={currentPage === '/ViewPlaylists'}><button id='view-playlists'>view playlists</button></Link>
+                <Link to="/ViewPlaylists"><button id='view-playlists'>view playlists</button></Link>
                 <br />
-                <Link to="/CreatePlaylist" className={currentPage === '/CreatePlaylist'}><button id='gen-playlist'>generate playlist</button></Link>
+                <Link to="/CreatePlaylist"><button id='gen-playlist'>generate playlist</button></Link>
             </div>
             <LinkSpotify />
         </div>

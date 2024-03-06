@@ -48,7 +48,7 @@ export default function ViewPlaylists() {
                 </div>
             </div>
             <div className="btn-container">
-                <Link to="/Home" className={currentPage === '/Home'}><button id='back-btn'>Back</button></Link>
+                <Link to="/Home"><button id='back-btn'>Back</button></Link>
             </div>
         </div>
     );

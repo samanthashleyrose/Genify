@@ -114,7 +114,6 @@ export default function GeneratePlaylist() {
                 <p className='p-title'>artists: {playlistData.artists.map(artist => artist.name).join(', ')}</p>
                 <p className='p-title'>{playlistData.songCount} songs</p>
                 <p className='p-title'>{playlistData.playlistName}</p>
-                <Link to="/"><button id='link-to-spotify-btn'>Add to your Spotify Account</button></Link>
             </div>
         </div>
     );

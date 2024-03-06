@@ -40,7 +40,7 @@ export default function SelectArtists() {
     // Function to include artist
     const includeArtist = (artist) => {
         if (!selectedArtists.includes(artist)) {
-            if (selectedArtists.length < 16) {
+            if (remainingSelections > 0) {
                 setSelectedArtists([...selectedArtists, artist]);
                 setPlaylistData({ ...playlistData, artists: [...playlistData.artists, artist] });
                 // selected value countdown
@@ -65,6 +65,11 @@ export default function SelectArtists() {
         }
     }, [searchInput]);
 
+    // Function to determine if an artist can be selected
+    const canSelectArtist = (artist) => {
+        return selectedArtists.includes(artist) || remainingSelections > 0;
+    };
+
     return (
         <div>
             <HeaderwithNav />
@@ -76,14 +81,14 @@ export default function SelectArtists() {
                         type="text"
                         placeholder="Search artists"
                         value={searchInput}
-                        onChange={handleSearchChange} 
-                        id='artist-input'/>
+                        onChange={handleSearchChange}
+                        id='artist-input' />
                     <ul id='artists-container'>
                         {searchResults.map(artist => (
                             <p
                                 className={`artist-option ${selectedArtists.includes(artist) ? 'selected' : ''}`}
                                 key={artist.id}
-                                onClick={() => includeArtist(artist)}
+                                onClick={() => canSelectArtist(artist) && includeArtist(artist)}
                             >
                                 {artist.name}
                             </p>

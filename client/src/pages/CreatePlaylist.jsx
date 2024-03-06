@@ -13,7 +13,7 @@ export default function CreatePlaylist() {
                 <h4 className='instructions'>To generate a new playlist, we have to gather some information about your interests. You may select up to 5 values total. Let's get started!</h4>
             </div>
             <div className="btn-container">
-                <Link to="/SelectGenres" className={currentPage === '/SelectGenres'}><button id='gen-playlist'>create a playlist</button></Link>
+                <Link to="/SelectGenres"><button id='gen-playlist'>create a playlist</button></Link>
             </div>
         </div>
     );
