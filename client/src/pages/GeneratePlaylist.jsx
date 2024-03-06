@@ -13,7 +13,7 @@ export default function GeneratePlaylist() {
 
     // Retrieves connected user's Spotify username
     const fetchUserId = async () => {
-        // Get detailed profile information about the current user (including the current user's username).
+        // SPOTIFY WEB API DESCRIPTION: Get detailed profile information about the current user (including the current user's username).
         try {
             const response = await fetch('https://api.spotify.com/v1/me', {
                 headers: {
@@ -69,7 +69,7 @@ export default function GeneratePlaylist() {
             const playlistId = playlistDataResponse.id;
 
             // Add tracks to playlist
-            // Add one or more items to a user's playlist.
+            // SPOTIFY WEB API DESCRIPTION: Add one or more items to a user's playlist.
             await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
                 method: 'POST',
                 headers: {
@@ -107,11 +107,11 @@ export default function GeneratePlaylist() {
                         </div>
                     </div>
                 ) : (
-                    <p>Loading...</p>
+                    <p id='loading'>loading...</p>
                 )}
                 <h3 className='h3-title'>About this Playlist</h3>
-                <p className='p-title'>Genres: {playlistData.genres.join(', ')}</p>
-                <p className='p-title'>Artists: {playlistData.artists.map(artist => artist.name).join(', ')}</p>
+                <p className='p-title'>genres: {playlistData.genres.join(', ')}</p>
+                <p className='p-title'>artists: {playlistData.artists.map(artist => artist.name).join(', ')}</p>
                 <p className='p-title'>{playlistData.songCount} songs</p>
                 <p className='p-title'>{playlistData.playlistName}</p>
                 <Link to="/"><button id='link-to-spotify-btn'>Add to your Spotify Account</button></Link>

@@ -43,7 +43,7 @@ export default function SelectArtists() {
             if (selectedArtists.length < 16) {
                 setSelectedArtists([...selectedArtists, artist]);
                 setPlaylistData({ ...playlistData, artists: [...playlistData.artists, artist] });
-            } // Add Else to show a message or alert indicating that the user cannot select more than 15 artists
+            }
         }
     };
 
