@@ -13,7 +13,7 @@ export default function GeneratePlaylist() {
 
     // Retrieves connected user's Spotify username
     const fetchUserId = async () => {
-        // Get detailed profile information about the current user (including the current user's username).
+        // SPOTIFY WEB API DESCRIPTION: Get detailed profile information about the current user (including the current user's username).
         try {
             const response = await fetch('https://api.spotify.com/v1/me', {
                 headers: {
@@ -69,7 +69,7 @@ export default function GeneratePlaylist() {
             const playlistId = playlistDataResponse.id;
 
             // Add tracks to playlist
-            // Add one or more items to a user's playlist.
+            // SPOTIFY WEB API DESCRIPTION: Add one or more items to a user's playlist.
             await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
                 method: 'POST',
                 headers: {
