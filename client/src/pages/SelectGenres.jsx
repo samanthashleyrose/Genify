@@ -41,11 +41,18 @@ export default function SelectGenres() {
             // selected value countdown
             setRemainingSelections(remainingSelections + 1);
         } else {
-            setSelectedGenres([...selectedGenres, genre]);
-            setPlaylistData({ ...playlistData, genres: [...playlistData.genres, genre] });
-            // selected value countdown
-            setRemainingSelections(remainingSelections - 1);
+            if (remainingSelections > 0) {
+                setSelectedGenres([...selectedGenres, genre]);
+                setPlaylistData({ ...playlistData, genres: [...playlistData.genres, genre] });
+                // selected value countdown
+                setRemainingSelections(remainingSelections - 1);
+            }
         }
+    };
+
+    // Function to determine if a genre can be selected
+    const canSelectGenre = (genre) => {
+        return selectedGenres.includes(genre) || remainingSelections > 0;
     };
 
     return (
@@ -60,7 +67,7 @@ export default function SelectGenres() {
                         <p
                             className={`genre-option ${selectedGenres.includes(genre) ? 'selected' : ''}`}
                             key={genre}
-                            onClick={() => handleGenreSelection(genre)}
+                            onClick={() => canSelectGenre(genre) && handleGenreSelection(genre)}
                         >
                             {genre}
                         </p>
