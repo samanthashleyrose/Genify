@@ -31,16 +31,19 @@ export default function SelectGenres() {
         };
 
         fetchGenres();
-    }, [token, setPlaylistData]);
+    }, [token]);
 
     // Function to handle genre selection
     const handleGenreSelection = (genre) => {
         if (selectedGenres.includes(genre)) {
             setSelectedGenres(selectedGenres.filter(item => item !== genre));
+            setPlaylistData({ ...playlistData, genres: playlistData.genres.filter(item => item !== genre) });
         } else {
             setSelectedGenres([...selectedGenres, genre]);
+            setPlaylistData({ ...playlistData, genres: [...playlistData.genres, genre] });
         }
-        setPlaylistData({ ...playlistData, genres: selectedGenres });
+        // console.log(playlistData);
+        // setPlaylistData({ ...playlistData, genres: [...selectedGenres] });
     };
 
     return (

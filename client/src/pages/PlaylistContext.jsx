@@ -7,11 +7,16 @@ export const PlaylistProvider = ({ children }) => {
         genres: [],
         artists: [],
         playlistName: '',
-        songCount: 5
+        songCount: null
     });
 
+    const setPlayListLeeWants = (data) => {
+        setPlaylistData(data)
+        console.log(data);
+    }
+
     return (
-        <PlaylistContext.Provider value={{ playlistData, setPlaylistData }}>
+        <PlaylistContext.Provider value={{ playlistData, setPlaylistData : setPlayListLeeWants }}>
             {children}
         </PlaylistContext.Provider>
     );
