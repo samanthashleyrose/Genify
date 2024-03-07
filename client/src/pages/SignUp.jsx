@@ -1,4 +1,5 @@
 import Title from "../components/Title"
+import { Link } from 'react-router-dom';
 
 export default function SignUp() {
     return (
@@ -14,7 +15,7 @@ export default function SignUp() {
                     <input id="pass-input" type="password" placeholder="password" name="password" autocomplete="off" />
                 </form>
                 <div class="btn-container">
-                    <button id="sign-up">sign up</button>
+                <Link to="/Home"><button id="sign-up">sign up</button></Link>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import Title from "../components/Title"
+import { Link } from 'react-router-dom';
 
 export default function Login() {
     return (
@@ -12,7 +13,7 @@ export default function Login() {
                     <input id="pass-input" type="password" placeholder="password" name="password" autocomplete="off" />
                 </form>
                 <div class="btn-container">
-                    <button id="login">login</button>
+                    <Link to="/Home"><button id="login">login</button></Link>
                 </div>
             </div>
         </div>
