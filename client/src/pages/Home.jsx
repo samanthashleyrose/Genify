@@ -1,9 +1,8 @@
 import TitlewithNav from '../components/TitlewithNav';
 import LinkSpotify from '../components/LinkSpotify';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Profile() {
-    const currentPage = useLocation().pathname;
 
     return (
         <div>

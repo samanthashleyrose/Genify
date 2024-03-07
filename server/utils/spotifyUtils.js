@@ -1,4 +1,3 @@
-// Example utility function for formatting track data
 function formatTrack(track) {
     return {
         id: track.id,
