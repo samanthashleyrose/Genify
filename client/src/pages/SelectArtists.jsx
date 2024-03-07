@@ -25,8 +25,15 @@ export default function SelectArtists() {
                     'Authorization': `Bearer ${token}`
                 }
             });
-            const data = await response.json();
-            setSearchResults(data.artists.items);
+
+            if (response.ok) {
+                const data = await response.json();
+                setSearchResults(data.artists.items);
+            } else if (response.status === 429) {
+                console.error('Too many requests. Please try again later.', response.statusText);
+            } else {
+                console.error('Error fetching artists:', response.statusText);
+            }
         } catch (error) {
             console.error('Error searching for artists:', error);
         }
