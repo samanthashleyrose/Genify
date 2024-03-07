@@ -1,7 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { PlaylistContext } from './PlaylistContext';
 import HeaderwithNav from '../components/TitlewithNav';
-import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function GeneratePlaylist() {

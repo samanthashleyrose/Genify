@@ -23,15 +23,23 @@ export default function SelectGenres() {
                         'Authorization': `Bearer ${token}`
                     }
                 });
-                const data = await response.json();
-                setGenres(data.genres);
+    
+                if (response.ok) {
+                    const data = await response.json();
+                    setGenres(data.genres);
+                } else if (response.status === 429) {
+                    console.error('Too many requests. Please try again later.', response.statusText);
+                } else {
+                    console.error('Error fetching genres:', response.statusText);
+                }
             } catch (error) {
                 console.error('Error fetching genres:', error);
             }
         };
-
+    
         fetchGenres();
     }, [token]);
+    
 
     // Function to handle genre selection
     const handleGenreSelection = (genre) => {
