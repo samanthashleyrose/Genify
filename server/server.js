@@ -9,7 +9,7 @@ const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 // const authRoutes = require('./routes/index');
 
-const PORT = process.env.PORT || 3027;
+const PORT = process.env.PORT || 3028;
 const app = express();
 const server = new ApolloServer({
   typeDefs,
