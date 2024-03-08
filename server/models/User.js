@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const playlistSchema = require('./Playlist')
+// const playlistSchema = require('./Playlist')
 
 const userSchema = new Schema(
   {
@@ -43,9 +43,9 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-userSchema.virtual('generatedPlaylistCount').get(function () {
-  return this.savedPlaylists.length;
-});
+// userSchema.virtual('generatedPlaylistCount').get(function () {
+//   return this.savedPlaylists.length;
+// });
 
 const User = model('User', userSchema);
 

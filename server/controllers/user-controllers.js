@@ -28,3 +28,8 @@ module.exports = {
     res.json({ token, user });
   }
 };
+
+// TRASH THIS FILE
+// TRASH THIS FILE
+// TRASH THIS FILE
+// TRASH THIS FILE
