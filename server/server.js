@@ -2,9 +2,11 @@ const express = require('express');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
+const { authMiddleware } = require('./utils/auth');
+
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-const SpotifyWebApi = require('spotify-web-api-node');
+const authRoutes = require('./routes/index');
 
 const PORT = process.env.PORT || 3027;
 const app = express();
@@ -19,14 +21,16 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
 
-  app.use('/graphql', expressMiddleware(server));
+  app.use('/graphql', expressMiddleware(server, {
+    context: authMiddleware
+  }));
+  app.use('/api/auth', authRoutes);
 
   // Serve client/build as static assets
   app.use(express.static(path.join(__dirname, '../client')));
 
-  // Define a route handler for the root URL
+  // Route handler for the root URL
   app.get('/', (req, res) => {
-    // Serve the React application's index.html
     res.sendFile(path.join(__dirname, '../client', 'index.html'));
   });
 

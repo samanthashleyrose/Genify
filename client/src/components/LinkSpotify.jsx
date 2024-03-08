@@ -37,7 +37,7 @@ export default function LinkSpotify() {
                 Scopes.userReadPrivate,
                 "user-read-email",
                 "playlist-modify-public",
-              ]} // either style will work
+              ]}
               onAccessToken={handleTokenSuccess}
             />
           </div>

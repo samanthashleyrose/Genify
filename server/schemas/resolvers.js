@@ -1,7 +1,5 @@
 const { User } = require('../models/User.js');
-const { getUserIdFromToken } = require('../utils/spotifyUtils'); // Implement this function to extract user ID from token
- // Adjust the path as necessary
-const spotifyApi = require('../utils/spotifyApi'); // Initialize Spotify API client
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -18,6 +16,31 @@ const resolvers = {
       } catch (error) {
         throw new Error('Failed to fetch user information from Spotify API');
       }
+    },
+  },
+  Mutation: {
+    loginUser: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('Incorrect email or password');
+      }
+
+      const correctPassword = await user.isCorrectPassword(password);
+
+      if (!correctPassword) {
+        throw new AuthenticationError('Incorrect email or password');
+      }
+
+      const token = signToken(user);
+      return { token, user };
+    },
+
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({username, email, password});
+      const token = signToken(user);
+
+      return { token, user };
     },
   },
 };

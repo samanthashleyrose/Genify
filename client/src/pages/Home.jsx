@@ -6,7 +6,14 @@ export default function Profile() {
 
     return (
         <div>
-            <TitlewithNav />
+            <div className="header-nav-container">
+                <div className="titles-container">
+                    <h1 id="sm-title">Genify</h1>
+                    <h2 id="sm-subtitle">a spotify playlist generator.</h2>
+                </div>
+
+                <Link to="/"><button id="logout">logout</button></Link>
+            </div>
             <h3 className='h3-title'>Welcome, user</h3>
             <div className="btn-container">
                 <Link to="/ViewPlaylists"><button id='view-playlists'>view playlists</button></Link>
