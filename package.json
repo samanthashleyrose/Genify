@@ -1,5 +1,5 @@
 {
-    "name": "playlist-generator",
+    "name": "Genify",
     "author": "Samantha Rose",
     "version": "1.0.0",
     "description": "Generates playlists for users and using Spotify authorization code to add the playlists to a users account",
@@ -8,7 +8,7 @@
     "scripts": {
         "start": "nodemon server.js && cd client && npm run dev",
         "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
-        "install": "concurrently \"cd server && npm install\" \"cd client && npm install --legacy-peer-deps\"",
+        "install": "concurrently \"cd server && npm install\" \"cd client && export NODE_ENV=development && npm install --legacy-peer-deps\"",
         "build": "cd client && npm run build && npm run dev"
     },
     "devDependencies": {

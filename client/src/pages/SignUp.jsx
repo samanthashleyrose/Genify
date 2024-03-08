@@ -16,7 +16,7 @@ export default function SignUp() {
     });
 
     // Mutation to add a new user
-    const [addUser, { error, data }] = useMutation(ADD_USER);
+    const [addUser, { data }] = useMutation(ADD_USER);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -83,12 +83,6 @@ export default function SignUp() {
                         <button id="sign-up"type="submit">sign up</button>
                     </div>
                 </form>
-
-                {error && (
-                    <div>
-                        {error.message}
-                    </div>
-                )}
             </div>
         </div>
     );

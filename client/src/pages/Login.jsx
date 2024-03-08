@@ -1,28 +1,42 @@
 import React, { useState } from 'react';
 import Title from "../components/Title";
 
+import { useMutation } from '@apollo/client';
+
+import { LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
+
 export default function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
 
     // Handles logging in a new user up OR catches an error
-    const handleLogin = async (event) => {
+    const [formState, setFormState] = useState({
+        email: '',
+        password: '',
+    });
+
+    // Mutation to login a user
+    const [loginUser, { data }] = useMutation(LOGIN_USER);
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    };
+
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
+        console.log(formState);
+
         try {
-            const response = await fetch('/api/auth/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, password }),
+            const { data } = await loginUser({
+                variables: { ...formState },
             });
-            if (response.ok) {
-                const data = await response.json();
-                localStorage.setItem('token', data.token);
-                window.location.href = '/Home';
-            } else {
-                console.error('Login failed');
-            }
-        } catch (error) {
-            console.error('Error logging in:', error);
+            console.log(data);
+            Auth.login(data.loginUser.token);
+        } catch (e) {
+            console.error(e);
         }
     };
 
@@ -31,26 +45,28 @@ export default function Login() {
             <Title />
             <div className="login-signup-container">
                 <h3 className="h3-title">login</h3>
-                <form id="login-form">
+                <form id="login-form" onSubmit={handleFormSubmit}>
                     <input
                         id="email-input"
                         type="text"
                         placeholder="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        name="email"
+                        value={formState.email}
+                        onChange={handleChange}
                         autoComplete="off" />
                     <br />
                     <input
                         id="pass-input"
                         type="password"
                         placeholder="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        name="password"
+                        value={formState.password}
+                        onChange={handleChange}
                         autoComplete="off" />
+                    <div className="btn-container">
+                        <button id="login" type="submit">Login</button>
+                    </div>
                 </form>
-                <div className="btn-container">
-                    <button id="login" onClick={handleLogin}>Login</button>
-                </div>
             </div>
         </div>
     );
