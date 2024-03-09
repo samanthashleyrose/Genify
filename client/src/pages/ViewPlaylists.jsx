@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import HeaderwithNav from '../components/TitlewithNav';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie'
 
 export default function ViewPlaylists() {
     const [playlists, setPlaylists] = useState([]);
-    const currentPage = useLocation().pathname;
 
     const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"));
 
