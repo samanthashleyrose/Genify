@@ -163,6 +163,10 @@ body {
     width: 100%;
 }
 
+#link-spotify-container {
+    width: 25%;
+}
+
 #unlink-spotify-btn {
     background-color: none;
     border-style: none;
@@ -172,7 +176,7 @@ body {
     font-family: 'MuseoModerno';
     padding: 1%;
     margin-bottom: 2%;
-    width: 30%;
+    width: 100%;
 }
 
 /* VIEW PLAYLISTS */
