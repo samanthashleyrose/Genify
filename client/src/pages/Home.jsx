@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LinkSpotify from '../components/LinkSpotify';
 import { Link } from 'react-router-dom';
 import Message from '../components/Message';
@@ -12,11 +12,20 @@ export default function Home() {
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
+        
     }
     // Message displays informing user they must link their spotify account before they can generate a playlist
     const linkSpotifyAlert = (event) => {
         event.preventDefault();
-        setShowAlert(true);
+
+        const spotifyToken = localStorage.getItem('spotify_token');
+
+        // Allows user to move onto /CreatePlaylist if spotify token found in local storage
+        if (spotifyToken) {
+            window.location.href = '/CreatePlaylist';
+        } else {
+            setShowAlert(true);
+        }
     }
 
     // Function to close the alert message
