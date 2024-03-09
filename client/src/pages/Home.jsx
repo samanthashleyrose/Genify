@@ -2,7 +2,15 @@ import TitlewithNav from '../components/TitlewithNav';
 import LinkSpotify from '../components/LinkSpotify';
 import { Link } from 'react-router-dom';
 
-export default function Profile() {
+import Auth from '../utils/auth';
+
+export default function Home() {
+
+    // Handles logging out a user
+    const logout = (event) => {
+        event.preventDefault();
+        Auth.logout();
+    }
 
     return (
         <div>
@@ -12,9 +20,9 @@ export default function Profile() {
                     <h2 id="sm-subtitle">a spotify playlist generator.</h2>
                 </div>
 
-                <Link to="/"><button id="logout">logout</button></Link>
+                <Link to="/"><button id="logout" onClick={logout}>logout</button></Link>
             </div>
-            <h3 className='h3-title'>Welcome, user</h3>
+            <h3 className='h3-title'>Welcome</h3>
             <div className="btn-container">
                 <Link to="/ViewPlaylists"><button id='view-playlists'>view playlists</button></Link>
                 <br />

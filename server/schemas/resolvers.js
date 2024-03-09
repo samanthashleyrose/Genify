@@ -4,20 +4,9 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    getUserInfo: async (_, __, { token }) => {
-      try {
-        const userId = await getUserIdFromToken(token);
-        spotifyApi.setAccessToken(token);
-        const userData = await spotifyApi.getUser(userId);
-        return {
-          id: userData.id,
-          displayName: userData.display_name,
-          email: userData.email,
-        };
-      } catch (error) {
-        throw new Error('Failed to fetch user information from Spotify API');
-      }
-    },
+    getUser: async (parent, { username }) => {
+        return User.findOne({ username })
+    }
   },
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
