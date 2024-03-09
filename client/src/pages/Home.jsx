@@ -21,7 +21,7 @@ export default function Home() {
 
     // Function to close the alert message
     const closeAlert = () => {
-        setShowAlert(false); // Hide the alert message
+        setShowAlert(false);
     }
 
     return (
