@@ -14,9 +14,11 @@ export default function LinkSpotify() {
   useEffect(() => navigate(location.pathname), [token])
 
   const handleTokenSuccess = (receivedToken) => {
+    localStorage.setItem("spotify_token", receivedToken);
     setToken(receivedToken);
   };
   const handleLogout = () => {
+    localStorage.removeItem("spotify_token");
     Cookies.remove("spotifyAuthToken");
     setToken(null);
   };
