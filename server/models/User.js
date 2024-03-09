@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+// const playlistSchema = require('./Playlist')
+
 const userSchema = new Schema(
   {
     username: {
@@ -18,6 +20,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    // createdPlaylists: [playlistSchema]
   },
   {
     toJSON: {
@@ -25,8 +28,8 @@ const userSchema = new Schema(
     },
   }
 );
-
-// hash user password
+ 
+// Hash user password
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
@@ -40,9 +43,9 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-userSchema.virtual('generatedPlaylistCount').get(function () {
-  return this.savedPlaylists.length;
-});
+// userSchema.virtual('generatedPlaylistCount').get(function () {
+//   return this.savedPlaylists.length;
+// });
 
 const User = model('User', userSchema);
 

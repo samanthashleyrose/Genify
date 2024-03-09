@@ -123,6 +123,18 @@ body {
 }
 
 /* HOME */
+#logout {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    height: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
 #welcome-msg {
     color: var(--text-green);
     font-family: 'MuseoModerno';

@@ -1,12 +1,22 @@
 const typeDefs = `#graphql
     type User {
-    id: ID!
+    _id: ID!
     username: String!
     email: String
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
-    getUserInfo: User!
+    getUser: User!
+  }
+
+  type Mutation {
+    loginUser(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
   }
 `;
 
