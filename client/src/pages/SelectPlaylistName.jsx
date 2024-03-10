@@ -8,6 +8,7 @@ export default function SelectPlaylistName() {
 
     // State to store the selected number of songs
     const [playlistName, setPlaylistName] = useState('');
+    const [nameAdded, setNameAdded] = useState(false);
 
     // Function to handle changes in the song count
     const handlePlaylistNameChange = (event) => {
@@ -18,6 +19,7 @@ export default function SelectPlaylistName() {
     const addName = () => {
         console.log('Playlist name:', playlistName);
         setPlaylistData({ ...playlistData, playlistName });
+        setNameAdded(true);
     };
 
     // Function to generate a random name for the playlist
@@ -25,6 +27,7 @@ export default function SelectPlaylistName() {
         const randomName = 'Random Playlist';
         setPlaylistName(randomName);
         setPlaylistData({ ...playlistData, playlistName: randomName });
+        setNameAdded(true);
     };
 
     return (
@@ -38,8 +41,9 @@ export default function SelectPlaylistName() {
                     placeholder="Enter Playlist Name"
                     value={playlistName}
                     onChange={handlePlaylistNameChange}
-                />
-              <div id='name-btn-container'>
+                    autoComplete="off"
+                    required />
+                <div id='name-btn-container'>
                     <button type="button" id='add-name-btn' onClick={addName}>Add Name</button>
                     <button type="button" id='random-name-btn' onClick={generateRandomName}>Random Name</button>
                 </div>
@@ -47,7 +51,7 @@ export default function SelectPlaylistName() {
             </div>
             <div className="gen-btn-container">
                 <Link to="/SelectSongCount"><button id='back-btn'>Back</button></Link>
-                <Link to="/GeneratePlaylist"><button id='next-btn'>Generate Playlist</button></Link>
+                <Link to="/GeneratePlaylist"><button id='next-btn' disabled={!nameAdded}>Generate Playlist</button></Link>
             </div>
         </div>
     );

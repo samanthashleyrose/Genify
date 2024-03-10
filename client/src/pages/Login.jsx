@@ -49,7 +49,8 @@ export default function Login() {
                         name="email"
                         value={formState.email}
                         onChange={handleChange}
-                        autoComplete="off" />
+                        autoComplete="off" 
+                        required/>
                     <br />
                     <input
                         id="pass-input"
@@ -58,7 +59,8 @@ export default function Login() {
                         name="password"
                         value={formState.password}
                         onChange={handleChange}
-                        autoComplete="off" />
+                        autoComplete="off" 
+                        required/>
                     <div className="btn-container">
                         <button id="login" type="submit">Login</button>
                     </div>

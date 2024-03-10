@@ -52,33 +52,30 @@ export default function SignUp() {
                         type="text"
                         placeholder="username"
                         name="username"
-                        // value={username}
-                        // onChange={(e) => setUsername(e.target.value)}
                         value={formState.name}
                         onChange={handleChange}
-                        autoComplete="off" />
+                        autoComplete="off" 
+                        required />
                     <br />
                     <input
                         id="email-input"
                         type="text"
                         placeholder="email"
                         name="email"
-                        // value={email}
-                        // onChange={(e) => setEmail(e.target.value)}
                         value={formState.email}
                         onChange={handleChange}
-                        autoComplete="off" />
+                        autoComplete="off" 
+                        required />
                     <br />
                     <input
                         id="pass-input"
                         type="password"
                         placeholder="password"
                         name="password"
-                        // value={password}
-                        // onChange={(e) => setPassword(e.target.value)}
                         value={formState.password}
                         onChange={handleChange}
-                        autoComplete="off" />
+                        autoComplete="off" 
+                        required />
                     <div className="btn-container">
                         <button id="sign-up"type="submit">sign up</button>
                     </div>
