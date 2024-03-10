@@ -11,7 +11,7 @@ export default defineConfig({
     }
   },
   server: {
-    // port: 3027,
+    port: 3027,
     open: true,
     proxy: {
       '/graphql': {

@@ -35,17 +35,15 @@ const resolvers = {
       return { token, user };
     },
     addPlaylist: async (parent, { name, tracks }, context) => {
+      if (!context.user) {
+        throw new AuthenticationError;
+      }
+
       const playlist = await Playlist.create({ name, tracks, owner: context.user._id  });
 
-      await User.findOneAndUpdate
-      (
-        context.user._id,
-        { $addToSet: { playlists: playlist._id } }
-      );
+      await User.findByIdAndUpdate(context.user._id, { $addToSet: { playlists: playlist._id } });
 
       return playlist;
-      console.error('Error adding playlist:', error);
-      throw new Error('Failed to add playlist.');
     },
   },
 };
