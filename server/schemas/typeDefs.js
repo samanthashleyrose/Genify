@@ -17,7 +17,8 @@ const typeDefs = `#graphql
   type Mutation {
     loginUser(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-  }
+    addPlaylist(name: String!, tracks: [ID]!): Auth
+  }, 
 `;
 
 module.exports = typeDefs;

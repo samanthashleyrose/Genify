@@ -6,10 +6,6 @@ const playlistSchema = new Schema(
             type: String,
             required: true,
         },
-        description: {
-            type: String,
-            default: '',
-        },
         tracks: [
             {
                 type: Schema.Types.ObjectId,
