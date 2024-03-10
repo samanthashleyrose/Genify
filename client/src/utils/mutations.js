@@ -28,3 +28,15 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const ADD_PLAYLIST = gql`
+  mutation addPlaylist($name: String!, $tracks: [ID]!) {
+    addPlaylist(name: $name, tracks: $tracks) {
+      _id
+      name
+      tracks
+      owner
+      created_at
+    }
+  }
+`;

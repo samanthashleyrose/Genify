@@ -18,7 +18,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    thoughts: [
+    playlists: [
       {
         type: Schema.Types.ObjectId,
         ref: 'Playlist',
@@ -45,10 +45,6 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
-
-// userSchema.virtual('generatedPlaylistCount').get(function () {
-//   return this.savedPlaylists.length;
-// });
 
 const User = model('User', userSchema);
 

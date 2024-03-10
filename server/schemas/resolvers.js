@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const Playlist = require('../models/Playlist');
 const { signToken } = require('../utils/auth');
 
 
@@ -34,7 +35,19 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addPlaylist: async (parent, { name, tracks }, context) => {
+      const playlist = await Playlist.create({ name, tracks, owner: context.user._id  });
 
+      await User.findOneAndUpdate
+      (
+        context.user._id,
+        { $addToSet: { playlists: playlist._id } }
+      );
+
+      return playlist;
+      console.error('Error adding playlist:', error);
+      throw new Error('Failed to add playlist.');
+    },
   },
 };
 
