@@ -18,18 +18,17 @@ const resolvers = {
 
       return { token, user };
     },
-
     loginUser: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('Incorrect email or password');
+        throw AuthenticationError;
       }
 
       const correctPassword = await user.isCorrectPassword(password);
 
       if (!correctPassword) {
-        throw new AuthenticationError('Incorrect email or password');
+        throw AuthenticationError;
       }
 
       const token = signToken(user);
