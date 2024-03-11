@@ -12,7 +12,7 @@ const typeDefs = `#graphql
     tracks: String!
     owner: User!
   }
-  
+
   type Auth {
     token: ID!
     user: User
@@ -25,7 +25,7 @@ const typeDefs = `#graphql
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     loginUser(email: String!, password: String!): Auth
-    createPlaylist(spotify_id: String!, name: String!, tracks: String!, owner: ID!): Playlist
+    createPlaylist(spotify_id: String!, name: String!, tracks: String!, owner: User!): Playlist
   }, 
 `;
 
