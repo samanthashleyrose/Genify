@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const playlistSchema = require('./Playlist');
+// const playlistSchema = require('./Playlist');
 
 const userSchema = new Schema(
   {
@@ -20,7 +20,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    playlists: [playlistSchema],
+    playlists: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Playlist',
+      }
+    ],
   },
   {
     toJSON: {
@@ -28,7 +33,7 @@ const userSchema = new Schema(
     },
   }
 );
- 
+
 // Hash user password
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {

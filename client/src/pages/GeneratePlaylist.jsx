@@ -68,7 +68,9 @@ export default function GeneratePlaylist() {
                     public: true,
                 })
             });
+            
             const playlistDataResponse = await playlistResponse.json();
+            console.log(playlistDataResponse);
             const playlistId = playlistDataResponse.id;
 
             // Add tracks to playlist
