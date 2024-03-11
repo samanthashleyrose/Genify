@@ -2,7 +2,6 @@ const User = require('../models/User');
 const Playlist = require('../models/Playlist');
 const { signToken } = require('../utils/auth');
 
-
 const resolvers = {
   Query: {
     getUser: async (parent, { username }) => {
@@ -34,19 +33,11 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addPlaylist: async (parent, { playlist }, context) => {
-      if (context.user) {
-        const updatedUser = await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { playlists: playlist._id } },
-          { new: true }
-        ).populate('generatedPlaylists');
-
-        return updatedUser;
-      }
-
-      throw new AuthenticationError;
-    },
+    createPlaylist: async (parent, { spotify_id, name, tracks, owner }) => {
+      const playlist = await Playlist.create({ spotify_id, name, tracks, owner});
+      
+      return playlist;
+    }
   },
 };
 

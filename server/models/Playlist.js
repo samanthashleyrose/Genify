@@ -3,7 +3,10 @@ const { Schema, model } = require('mongoose');
 const playlistSchema = new Schema(
     {
         id: {
-            type: String
+            type: Schema.Types.ObjectId,
+        },
+        spotify_id: {
+            type: String,
         },
         name: {
             type: String,
@@ -17,10 +20,6 @@ const playlistSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'User',
             required: true,
-        },
-        created_at: {
-            type: Date,
-            default: Date.now,
         },
     },
     {
