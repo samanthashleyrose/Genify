@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const playlistSchema = require('./Playlist');
+
 const userSchema = new Schema(
   {
     username: {
@@ -18,12 +20,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    playlists: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Playlist',
-      },
-    ],
+    playlists: [playlistSchema],
   },
   {
     toJSON: {

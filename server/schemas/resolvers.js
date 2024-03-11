@@ -34,16 +34,18 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addPlaylist: async (parent, { name, tracks }, context) => {
-      if (!context.user) {
-        throw new AuthenticationError;
+    addPlaylist: async (parent, { playlist }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { playlists: playlist._id } },
+          { new: true }
+        ).populate('generatedPlaylists');
+
+        return updatedUser;
       }
 
-      const playlist = await Playlist.create({ name, tracks, owner: context.user._id  });
-
-      await User.findByIdAndUpdate(context.user._id, { $addToSet: { playlists: playlist._id } });
-
-      return playlist;
+      throw new AuthenticationError;
     },
   },
 };

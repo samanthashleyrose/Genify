@@ -1,17 +1,18 @@
-const { Schema, model } = require('mongoose');
+const { Schema } = require('mongoose');
 
 const playlistSchema = new Schema(
     {
+        id: {
+            type: Number
+        },
         name: {
             type: String,
             required: true,
         },
-        tracks: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Track',
-            },
-        ],
+        tracks: {
+            type: String,
+            required: true
+        },
         owner: {
             type: Schema.Types.ObjectId,
             ref: 'User',
@@ -29,10 +30,4 @@ const playlistSchema = new Schema(
     }
 );
 
-playlistSchema.virtual('songCount').get(function () {
-    return this.tracks.length;
-});
-
-const Playlist = model('Playlist', playlistSchema);
-
-module.exports = Playlist;
+module.exports = playlistSchema;
