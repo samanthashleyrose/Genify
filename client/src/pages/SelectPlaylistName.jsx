@@ -22,14 +22,6 @@ export default function SelectPlaylistName() {
         setNameAdded(true);
     };
 
-    // Function to generate a random name for the playlist
-    const generateRandomName = () => {
-        const randomName = 'Random Playlist';
-        setPlaylistName(randomName);
-        setPlaylistData({ ...playlistData, playlistName: randomName });
-        setNameAdded(true);
-    };
-
     return (
         <div>
             <HeaderwithNav />
@@ -43,11 +35,10 @@ export default function SelectPlaylistName() {
                     onChange={handlePlaylistNameChange}
                     autoComplete="off"
                     required />
+                <p id='playlist-name'>{playlistName}</p>
                 <div id='name-btn-container'>
                     <button type="button" id='add-name-btn' onClick={addName}>Add Name</button>
-                    <button type="button" id='random-name-btn' onClick={generateRandomName}>Random Name</button>
                 </div>
-                <p id='playlist-name'>{playlistName}</p>
             </div>
             <div className="gen-btn-container">
                 <Link to="/SelectSongCount"><button id='back-btn'>Back</button></Link>

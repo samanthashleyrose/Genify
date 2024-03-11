@@ -104,7 +104,7 @@ export default function SelectArtists() {
                     <div id='selected-artists-container'>
                         <h4 id="h4-selected-artists">Selected Artists</h4>
                         {selectedArtists.map(artist => (
-                            <p className="included-artist" key={artist.id}>{artist.name}<span><button onClick={() => removeArtist(artist)}>remove artist</button></span></p>
+                            <p className="included-artist" key={artist.id}>{artist.name}<span><button id='remove-btn' onClick={() => removeArtist(artist)}>remove</button></span></p>
                         ))}
                     </div>
                 </form>

@@ -32,6 +32,13 @@ body {
     text-align: center;
 }
 
+.entrance-container {
+    align-items: center;
+    display: block;
+    text-align: center;
+    margin-top: 15%;
+}
+
 /* TITLE w NAV / BUTTONS */
 .header-nav-container {
     display: inline-flex;
@@ -127,7 +134,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
 #logout {
@@ -140,6 +146,10 @@ body {
     height: 10%;
     padding-left: 20%;
     padding-right: 20%;
+}
+
+.home-info {
+    width: 50%;
 }
 
 #welcome-msg {
@@ -179,6 +189,21 @@ body {
     width: 100%;
 }
 
+#back-btn,
+#next-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
 /* VIEW PLAYLISTS */
 .view-playlist-page {
     text-align: center;
@@ -196,12 +221,15 @@ body {
 .playlist-item {
     display: inline-flex;
     align-items: center;
+    text-align: left;
     background-color: var(--card-gray);
     border-style: none;
     border-radius: 5px;
     color: var(--text-black);
     font-size: 1rem;
     font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
     margin-bottom: 3%;
     width: 100%;
 }
@@ -217,6 +245,66 @@ body {
     width: 10%;
 }
 
+/* CREATE PLAYLIST */
+.create-playlist-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+#link-spotify-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.instructions {
+    color: var(--text-gray);
+    font-family: 'MuseoModerno';
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-align: center;
+    width: 70%;
+}
+
+.genres-container {
+    background-color: var(--card-gray);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding: 1.5%;
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+.gen-btn-container {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+#create-playlist {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: 1rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+
 /* SELECT GENRE */
 .select-genre-page {
     display: flex;
@@ -224,7 +312,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 5%;
+    margin-left: 8%;
     margin-right: 8%;
 }
 
@@ -242,6 +330,7 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 0%;
+    padding: 0%;
 }
 
 .genre-option {
@@ -266,7 +355,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 5%;
+    margin-left: 8%;
     margin-right: 8%;
 }
 
@@ -275,6 +364,7 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 0%;
+    padding: 0%;
 }
 
 #artist-input {
@@ -318,11 +408,7 @@ body {
 #selected-artists-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
     margin-top: 0%;
-    text-align: center;
-    justify-content: center;
     align-items: center;
 }
 
@@ -339,16 +425,30 @@ body {
     background-color: var(--input-gray);
     border-style: none;
     border-radius: 5px;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     padding-top: .5%;
     padding-bottom: .5%;
     margin-right: 1%;
-    width: 100%;
+    width: 70%;
 }
 
 .selected {
     background-color: var(--input-green);
+}
+
+#remove-btn {
+    background-color: var(--input-green);
+    border-style: none;
+    border-radius: 5px;
+    color: var(--text-black);
+    font-size: .8rem;
+    font-family: 'MuseoModerno';
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 3%;
 }
 
 /* SONG COUNT */
@@ -372,7 +472,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 5%;
+    margin-left: 8%;
     margin-right: 8%;
 }
 
@@ -386,6 +486,7 @@ body {
     padding: .5%;
     margin-bottom: 2%;
     width: 30%;
+    text-align: center;
 }
 
 #playlist-name {
@@ -469,67 +570,6 @@ body {
     margin-right: .5%;
 }
 
-/* CREATE PLAYLIST */
-.create-playlist-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 15%;
-}
-
-#link-spotify-container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2%;
-}
-
-.instructions {
-    color: var(--text-gray);
-    font-family: 'MuseoModerno';
-    font-size: 1.2rem;
-    margin-bottom: 2%;
-    margin-top: 0%;
-    text-align: center;
-    width: 70%;
-}
-
-.genres-container {
-    background-color: var(--card-gray);
-    border-style: none;
-    border-radius: 5px;
-    color: var(--text-black);
-    font-size: 1rem;
-    font-family: 'MuseoModerno';
-    padding: 1.5%;
-    margin-bottom: 2%;
-    width: 30%;
-}
-
-.gen-btn-container {
-    display: block;
-    justify-content: center;
-    text-align: center;
-    width: 96.5%;
-}
-
-#back-btn,
-#next-btn {
-    background-color: var(--input-green);
-    border-style: none;
-    border-radius: 5px;
-    color: var(--text-black);
-    font-size: 1rem;
-    font-family: 'MuseoModerno';
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-bottom: 2%;
-    margin-left: .5%;
-    margin-right: .5%;
-}
-
 /* MESSAGE / ALERTS */
 .msg-container {
     display: flex;
@@ -592,6 +632,7 @@ body {
     width: 30%;
 }
 
+#a-1,
 #a-2 {
     color: var(--text-black);
     text-decoration: none;
@@ -610,5 +651,334 @@ footer {
     border-bottom: 2px solid var(--text-gray);
     color: var(--text-gray);
     font-family: 'MuseoModerno';
+    font-size: 1rem;
     text-align: center;
+}
+
+/* RESPONSIVENESS */
+
+/* XS */
+@media (min-width: 300px) and (max-width: 500px) {
+
+    /* TITLE */
+    #title {
+        font-size: 3rem;
+    }
+
+    #subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* LOGIN / SIGN-UP / BUTTONS */
+    .h3-title {
+        font-size: 1.8rem;
+    }
+
+    #username-input,
+    #email-input,
+    #pass-input {
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    #login,
+    #sign-up {
+        font-size: 1rem;
+        width: 30%;
+    }
+
+    /* TITLE w NAV / BUTTONS */
+    #sm-title {
+        font-size: 2.5rem;
+    }
+
+    #sm-subtitle {
+        font-size: 1rem;
+    }
+
+    /* HOME */
+    #logout,
+    #home {
+        font-size: .85rem;
+    }
+
+    #unlink-spotify-btn {
+        margin-top: 5%;
+    }
+
+    #view-playlists,
+    #gen-playlist {
+        font-size: 1rem;
+    }
+
+    /* VIEW PLAYLISTS */
+    .playlist-item {
+        font-size: .85rem;
+    }
+
+    .playlist-img {
+        width: 20%;
+    }
+
+    /* CREATE PLAYLIST */
+    .instructions {
+        font-size: 1rem;
+    }
+
+    /* SELECT GENRE */
+    .countdown {
+        font-size: 1.1rem;
+    }
+
+    /* NAME PLAYLIST */
+    #enter-name {
+        width: 65%;
+        font-size: 1rem;
+    }
+
+    /* GENERATE PLAYLIST */
+    #loading,
+    .p-title {
+        font-size: 1.2rem;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* MESSAGE / ALERTS */
+    .msg-container {
+        width: 70%;
+    }
+
+    #alert-msg {
+        width: 90%;
+    }
+
+    /* CONTACT */
+    #contact-info {
+        width: 80%;
+    }
+
+    #a-1,
+    #a-2 {
+        font-size: .77rem;
+    }
+}
+
+/* S */
+@media (min-width: 501px) and (max-width: 700px) {
+
+    /* TITLE */
+    #title {
+        font-size: 3rem;
+    }
+
+    #subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* LOGIN / SIGN-UP / BUTTONS */
+    #username-input,
+    #email-input,
+    #pass-input {
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    #login,
+    #sign-up {
+        font-size: 1rem;
+        width: 20%;
+    }
+
+    /* HOME */
+    #unlink-spotify-btn {
+        margin-top: 5%;
+    }
+
+    #view-playlists,
+    #gen-playlist {
+        font-size: 1.1rem;
+        width: 80%;
+    }
+
+    /* VIEW PLAYLISTS */
+    .playlist-img {
+        width: 15%;
+    }
+
+    /* NAME PLAYLIST */
+    #enter-name {
+        width: 45%;
+        font-size: 1rem;
+    }
+
+    /* MESSAGE / ALERTS */
+    .msg-container {
+        width: 70%;
+    }
+
+    #alert-msg {
+        width: 90%;
+    }
+
+    /* CONTACT */
+    #contact-info {
+        width: 60%;
+    }
+
+    #a-1,
+    #a-2 {
+        font-size: .95rem;
+    }
+}
+
+/* M */
+@media (min-width: 701px) and (max-width: 1000px) {
+
+    /* TITLE */
+    #title {
+        font-size: 5rem;
+    }
+
+    #subtitle {
+        font-size: 2rem;
+    }
+
+    /* LOGIN / SIGN-UP / BUTTONS */
+    #username-input,
+    #email-input,
+    #pass-input {
+        font-size: 1.2rem;
+    }
+
+    #login,
+    #sign-up {
+        font-size: 1.2rem;
+        width: 20%;
+    }
+
+    /* HOME */
+    #unlink-spotify-btn {
+        margin-top: 3%;
+    }
+
+    #view-playlists,
+    #gen-playlist {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    /* CREATE PLAYLIST */
+    .create-playlist-page {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+    /* SELECT ARTISTS */
+    .included-artist {
+        width: 50%;
+    }
+
+    /* NAME PLAYLIST */
+    #enter-name {
+        width: 45%;
+        font-size: 1rem;
+    }
+
+    /* GENERATE PLAYLIST */
+    .generated-playlist {
+        width: 85%;
+    }
+
+    /* MESSAGE / ALERTS */
+    .msg-container {
+        width: 70%;
+    }
+
+    #alert-msg {
+        width: 90%;
+    }
+
+    /* CONTACT */
+    #contact-info {
+        width: 50%;
+    }
+
+    #a-1,
+    #a-2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* L */
+@media (min-width: 1001px) and (max-width: 1500px) {
+
+    /* TITLE */
+    #title {
+        font-size: 6rem;
+    }
+
+    #subtitle {
+        font-size: 2rem;
+    }
+
+    /* LOGIN / SIGN-UP / BUTTONS */
+    #login,
+    #sign-up {
+        font-size: 1.2rem;
+        width: 15%;
+    }
+
+    /* HOME */
+    #view-playlists,
+    #gen-playlist {
+        font-size: 1.3rem;
+        width: 60%;
+    }
+
+    /* VIEW PLAYLISTS */
+    .playlist-item {
+        font-size: 1.2rem;
+    }
+
+    /* CREATE PLAYLIST */
+    .create-playlist-page {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    /* SELECT ARTISTS */
+    .included-artist {
+        width: 40%;
+    }
+
+    /* GENERATE PLAYLIST */
+    .generated-playlist {
+        width: 85%;
+    }
+
+    #loading,
+    .p-title {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    /* MESSAGE / ALERTS */
+    .msg-container {
+        width: 40%;
+    }
+
+    #alert-msg {
+        width: 70%;
+    }
+
+    /* CONTACT */
+    #contact-info {
+        width: 40%;
+    }
+
+    #a-1,
+    #a-2 {
+        font-size: 1.2rem;
+    }
 }
