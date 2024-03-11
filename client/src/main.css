@@ -129,6 +129,12 @@ body {
     width: 20%;
 }
 
+#back-link {
+    font-size: 1rem;
+    color: var(--text-gray);
+    text-decoration: none;
+}
+
 /* HOME */
 .home-container {
     display: flex;

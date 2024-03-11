@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Title from "../components/Title"
-
+import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
@@ -80,6 +79,7 @@ export default function SignUp() {
                         <button id="sign-up"type="submit">sign up</button>
                     </div>
                 </form>
+                <Link to="/Login"><p id='back-link'>Already have an account? Login</p></Link>
             </div>
         </div>
     );
