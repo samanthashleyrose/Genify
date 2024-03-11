@@ -35,9 +35,10 @@ export default function SelectPlaylistName() {
                     onChange={handlePlaylistNameChange}
                     autoComplete="off"
                     required />
-                <p id='playlist-name'>{playlistName}</p>
+                {/* <p id='playlist-name'>{playlistName}</p> */}
                 <div id='name-btn-container'>
                     <button type="button" id='add-name-btn' onClick={addName}>Add Name</button>
+                    {nameAdded && <p id='playlist-name'>playlist name: {playlistName}</p>}
                 </div>
             </div>
             <div className="gen-btn-container">
