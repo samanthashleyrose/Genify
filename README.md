@@ -3,7 +3,7 @@
 
 ## Description
 
-Genify is a dynamic single-page application crafted with React and integrated with Spotify’s Web API powered by Apollo server. Designed to enhance user experience, the application efficiently processes user inputs and preferences to generate personalized, randomized playlists directly accessible through their Spotify accounts.
+<a href="https://genify-18f212542b9b.herokuapp.com/">Genify</a> is a dynamic single-page application crafted with React and integrated with Spotify’s Web API powered by Apollo server. Designed to enhance user experience, the application efficiently processes user inputs and preferences to generate personalized, randomized playlists directly accessible through their Spotify accounts.
 
 ## Table of Contents
 
@@ -44,9 +44,12 @@ Upon revisiting your Spotify account, you'll discover the curated playlist waiti
 
 ## Features
 
-## Future Development:
+## Future Development
 
-## How to Contribute 
+## How to Contribute
+If you are to come across any problems while using <a href="https://genify-18f212542b9b.herokuapp.com/">Genify</a>, feel free to open a new issue or submit a pull request through this repository. Your feedback and contributions are welcomed.
+
+Please don't hesitate to reach out regarding any concerns, propose improvements, or share suggestions.
 
 ## Creators
 
