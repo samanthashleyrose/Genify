@@ -3,6 +3,8 @@
 
 ## Description
 
+Genify is a dynamic single-page application crafted with React and integrated with Spotify’s Web API powered by Apollo server. Designed to enhance user experience, the application efficiently processes user inputs and preferences to generate personalized, randomized playlists directly accessible through their Spotify accounts.
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -19,6 +21,26 @@
 No installation necessary!
 
 ## Usage
+
+#### Account Creation and Homepage
+
+Get started by creating a Genify account on the Sign Up page. Upon successful registration, you will be logged in and brought to the Home page. Here, you have two options: 
+- explore your existing Genify playlists
+- initiate the creation of a new playlist.
+
+#### Link your Spotify Account
+Before moving forward you MUST link your spotify account. Simply select "Continue with Spotify" to be securely redirected to Spotify's OAuth login and agreement page. Once linked, you'll seamlessly return to Genify's home page. 
+
+#### Creating a Playlist
+Initiating playlist creation is effortless. Select "Generate Playlist" to kickstart the process. Users have the flexibility to choose up to 5 interests spanning genres and artists. A convenient countdown feature ensures users can easily track their progress across pages.
+
+Specify the desired number of songs for the playlist (ranging from 5 to 100) and give your new playlist a name. Upon confirming your selections by clicking "Generate Playlist," you'll be redirected to the Generate Playlist page, which provides insightful information used in crafting the playlist, alongside a preview icon.
+
+Upon revisiting your Spotify account, you'll discover the curated playlist waiting for you, perfectly tailored to your preferences.
+
+**Desktop View**
+
+**Mobile View**
 
 ## Features
 
