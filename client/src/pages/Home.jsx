@@ -15,7 +15,7 @@ export default function Home() {
 
     }
     // Message displays informing user they must link their spotify account before they can generate a playlist
-    const linkSpotifyAlert = (event) => {
+    const linkSpotifyAlertForGenPlaylist = (event) => {
         event.preventDefault();
 
         const spotifyToken = localStorage.getItem('spotify_token');
@@ -23,6 +23,19 @@ export default function Home() {
         // Allows user to move onto /CreatePlaylist if spotify token found in local storage
         if (spotifyToken) {
             window.location.href = '/CreatePlaylist';
+        } else {
+            setShowAlert(true);
+        }
+    }
+    // Message displays informing user they must link their spotify account before they can view their playlists
+    const linkSpotifyAlertForViewPlaylist = (event) => {
+        event.preventDefault();
+
+        const spotifyToken = localStorage.getItem('spotify_token');
+
+        // Allows user to move onto /ViewPlaylists if spotify token found in local storage
+        if (spotifyToken) {
+            window.location.href = '/ViewPlaylists';
         } else {
             setShowAlert(true);
         }
@@ -46,9 +59,9 @@ export default function Home() {
             <div className='home-info'>
                 <h3 className='h3-title'>Welcome</h3>
                 <div className="btn-container">
-                    <Link to="/ViewPlaylists"><button id='view-playlists'>view playlists</button></Link>
+                    <Link to="/ViewPlaylists"><button id='view-playlists' onClick={linkSpotifyAlertForViewPlaylist}>view playlists</button></Link>
                     <br />
-                    <Link to="/CreatePlaylist"><button id='gen-playlist' onClick={linkSpotifyAlert}>generate playlist</button></Link>
+                    <Link to="/CreatePlaylist"><button id='gen-playlist' onClick={linkSpotifyAlertForGenPlaylist}>generate playlist</button></Link>
                 </div>
             </div>
             <LinkSpotify />
