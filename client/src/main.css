@@ -856,11 +856,13 @@ footer {
     #pass-input {
         font-size: 1.2rem;
     }
-
     #login,
     #sign-up {
         font-size: 1.2rem;
         width: 20%;
+    }
+    #back-link {
+        font-size: 1.1rem;
     }
 
     /* HOME */
@@ -933,6 +935,9 @@ footer {
     #sign-up {
         font-size: 1.2rem;
         width: 15%;
+    }
+    #back-link {
+        font-size: 1.2rem;
     }
 
     /* HOME */
