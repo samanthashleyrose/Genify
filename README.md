@@ -43,6 +43,11 @@ Upon revisiting your Spotify account, you'll discover the curated playlist waiti
 **Mobile View**
 
 ## Features
+- **Genre and Artists Selection:** Utilizes the Spotify Web API to showcase genres and artists options.
+- **Song Range:** Customize the song amount included in generated playlists, allowing users to control the duration and depth of their listening experience.
+- **Custom Playlist Naming:** Enable users to name their generated playlists, adding a personal touch within their music library.
+- **Interests Countdown:** Tracks the amount of interests the user has left to select per creation.
+- **Spotify OAuth:** Link generated playlists to Spotify, enabling users to effortlessly access and enjoy their curated music collections directly within the Spotify platform.
 
 ## Future Development
 **Integration of Cover Images:** Enhance user experience by enabling the addition of custom cover images to generated playlists, adding a personalized touch to the listening experience.
