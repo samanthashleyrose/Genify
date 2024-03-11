@@ -12,7 +12,7 @@ export default function Home() {
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
-        
+
     }
     // Message displays informing user they must link their spotify account before they can generate a playlist
     const linkSpotifyAlert = (event) => {
@@ -43,14 +43,16 @@ export default function Home() {
 
                 <Link to="/"><button id="logout" onClick={logout}>logout</button></Link>
             </div>
-            <h3 className='h3-title'>Welcome</h3>
-            <div className="btn-container">
-                <Link to="/ViewPlaylists"><button id='view-playlists'>view playlists</button></Link>
-                <br />
-                <Link to="/CreatePlaylist"><button id='gen-playlist' onClick={linkSpotifyAlert}>generate playlist</button></Link>
+            <div className='home-info'>
+                <h3 className='h3-title'>Welcome</h3>
+                <div className="btn-container">
+                    <Link to="/ViewPlaylists"><button id='view-playlists'>view playlists</button></Link>
+                    <br />
+                    <Link to="/CreatePlaylist"><button id='gen-playlist' onClick={linkSpotifyAlert}>generate playlist</button></Link>
+                </div>
             </div>
             <LinkSpotify />
-            {showAlert && <Message onClose={closeAlert}/>}
+            {showAlert && <Message onClose={closeAlert} />}
         </div>
     );
 }
