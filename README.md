@@ -24,18 +24,21 @@ No installation necessary!
 
 #### Account Creation and Homepage
 
-Get started by creating a Genify account on the Sign Up page. Upon successful registration, you will be logged in and brought to the Home page. Here, you have two options: 
-- explore your existing Genify playlists
-- initiate the creation of a new playlist.
+Get started by creating a Genify account on the Sign Up page. Upon successful registration, you will be logged in and brought to the Home page. 
 
 ![Genify Entrance Screenshot](/client/src/assets/sc/entrance-sc.png)
 ![Genify Sign Up Screenshot](/client/src/assets/sc/signup-sc.png)
 ![Genify Login Screenshot](/client/src/assets/sc/login-sc.png)
+![Genify Home - Continue to Spotify Screenshot](/client/src/assets/sc/home-link-sc.png)
+
+Here, you have two options: 
+- explore your existing playlists
+- initiate the creation of a new playlist.
 
 #### Link your Spotify Account
 Before moving forward you MUST link your spotify account. Simply select "Continue with Spotify" to be securely redirected to Spotify's OAuth login and agreement page. Once linked, you'll seamlessly return to Genify's home page. 
 
-![Genify Home - Continue to Spotify Screenshot](/client/src/assets/sc/home-link-sc.png)
+
 ![Genify OOPS Alert Screenshot](/client/src/assets/sc/OOPS-alert.png)
 ![Genify Home - Unlink Spotify Screenshot](/client/src/assets/sc/home-unlink-sc.png)
 
