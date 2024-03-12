@@ -46,7 +46,7 @@ Specify the desired number of songs for the playlist (ranging from 5 to 100) and
 
 Upon revisiting your Spotify account, you'll discover the curated playlist waiting for you, perfectly tailored to your preferences.
 
-![Genify Create Playlist Screenshot](/client/src/assets/sc/create-playlist-instructions.png)
+![Genify Create Playlist Instructions Screenshot](/client/src/assets/sc/create-playlist-instructions.png)
 ![Genify Select Genres Screenshot](/client/src/assets/sc/SelectGenre-sc.png)
 ![Genify Select Artists Screenshot](/client/src/assets/sc/SelectArtists-sc.png)
 ![Genify Select Song Count Screenshot](/client/src/assets/sc/song-count-sc.png)
