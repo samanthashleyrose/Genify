@@ -690,7 +690,7 @@ footer {
 
     /* LOGIN / SIGN-UP / BUTTONS */
     .h3-title {
-        font-size: 1.8rem;
+        font-size: 1.27rem;
     }
 
     #username-input,
@@ -741,11 +741,17 @@ footer {
     /* CREATE PLAYLIST */
     .instructions {
         font-size: 1rem;
+        width: 70%;
     }
 
     /* SELECT GENRE */
     .countdown {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    /* SELECT ARTISTS */
+    #h4-selected-artists {
+        font-size: 1.12rem;
     }
 
     /* NAME PLAYLIST */
