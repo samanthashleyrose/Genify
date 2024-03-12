@@ -118,7 +118,7 @@ export default function GeneratePlaylist() {
                 {playlist ? (
                     <div className="playlists-container">
                         <div className="generated-playlist">
-                            <img src="src/assets/imgs/spotify-logo.png" alt="Spotify Logo" className='playlist-img' />
+                            <img src="./assets/imgs/spotify-logo.png" alt="Spotify Logo" className='playlist-img' />
                             <h4 className='playlist-name'>{playlistData.playlistName}</h4>
                         </div>
                     </div>
