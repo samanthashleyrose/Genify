@@ -28,8 +28,16 @@ Get started by creating a Genify account on the Sign Up page. Upon successful re
 - explore your existing Genify playlists
 - initiate the creation of a new playlist.
 
+![Genify Entrance Screenshot](/client/src/assets/sc/entrance-sc.png)
+![Genify Sign Up Screenshot](/client/src/assets/sc/signup-sc.png)
+![Genify Login Screenshot](/client/src/assets/sc/login-sc.png)
+
 #### Link your Spotify Account
 Before moving forward you MUST link your spotify account. Simply select "Continue with Spotify" to be securely redirected to Spotify's OAuth login and agreement page. Once linked, you'll seamlessly return to Genify's home page. 
+
+![Genify Home - Continue to Spotify Screenshot](/client/src/assets/sc/home-link-sc.png)
+![Genify OOPS Alert Screenshot](/client/src/assets/sc/OOPS-alert.png)
+![Genify Home - Unlink Spotify Screenshot](/client/src/assets/sc/home-unlink-sc.png)
 
 #### Creating a Playlist
 Initiating playlist creation is effortless. Select "Generate Playlist" to kickstart the process. Users have the flexibility to choose up to 5 interests spanning genres and artists. A convenient countdown feature ensures users can easily track their progress across pages.
@@ -38,9 +46,20 @@ Specify the desired number of songs for the playlist (ranging from 5 to 100) and
 
 Upon revisiting your Spotify account, you'll discover the curated playlist waiting for you, perfectly tailored to your preferences.
 
-**Desktop View**
+![Genify Create Playlist Screenshot](/client/src/assets/sc/create-playlist-instructions.png)
+![Genify Select Genres Screenshot](/client/src/assets/sc/SelectGenre-sc.png)
+![Genify Select Artists Screenshot](/client/src/assets/sc/SelectArtists-sc.png)
+![Genify Select Song Count Screenshot](/client/src/assets/sc/song-count-sc.png)
+![Genify Name Playlist Screenshot](/client/src/assets/sc/name-playlist-sc.png)
+![Genify Generated Playlist Screenshot](/client/src/assets/sc/generated-playlist-sc.png)
+![Genify View Playlists Screenshot](/client/src/assets/sc/view-playlists-sc.png)
 
 **Mobile View**
+<br>
+
+![Genify Login Mobile View Screenshot](/client/src/assets/sc/login-mobile-view-sc.png)
+![Genify Home Mobile View Screenshot](/client/src/assets/sc/home-mobile-view-sc.png)
+![Genify Generated Playlist Mobile View Screenshot](/client/src/assets/sc/generated-playlist-mobile-view-sc.png)
 
 ## Features
 - **Genre and Artists Selection:** Utilizes the Spotify Web API to showcase genres and artists options.

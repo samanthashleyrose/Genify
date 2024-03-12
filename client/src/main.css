@@ -160,8 +160,8 @@ a {
 }
 
 .home-info {
-    margin-top: 50%;
-    width: 50%;
+    margin-top: 10%;
+    width: 30%;
 }
 
 #welcome-msg {
@@ -281,7 +281,7 @@ a {
     margin-bottom: 2%;
     margin-top: 0%;
     text-align: center;
-    width: 70%;
+    width: 55%;
 }
 
 .genres-container {
@@ -972,7 +972,7 @@ footer {
 
     /* HOME */
     .home-info {
-        margin-top: 15%;
+        margin-top: 10%;
         width: 50%;
     }
 
