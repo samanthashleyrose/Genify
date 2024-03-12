@@ -35,7 +35,8 @@ const resolvers = {
     },
     createPlaylist: async (parent, { spotify_id, name}, context) => {
       const playlist = await Playlist.create({ spotify_id, name, owner: context.user._id});
-      
+      await User.findByIdAndUpdate(context.user._id, {$push: {playlists: playlist._id}})
+
       return playlist;
     }
   },
