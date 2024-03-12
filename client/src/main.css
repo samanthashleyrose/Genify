@@ -93,6 +93,7 @@ body {
     font-family: 'MuseoModerno';
     font-size: 2rem;
     margin-bottom: 2%;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -155,6 +156,7 @@ body {
 }
 
 .home-info {
+    margin-top: 50%;
     width: 50%;
 }
 
@@ -292,7 +294,6 @@ body {
 
 .gen-btn-container {
     display: block;
-    justify-content: center;
     text-align: center;
     width: 100%;
 }
@@ -511,8 +512,7 @@ body {
     width: 100%;
 }
 
-#add-name-btn,
-#random-name-btn {
+#add-name-btn {
     background-color: var(--input-green);
     border-style: none;
     border-radius: 5px;
@@ -647,10 +647,10 @@ body {
 /* FOOTER */
 footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     margin-top: 27%;
+    position: fixed;
+    bottom: 0;
 }
 
 #footer-option {
@@ -675,6 +675,15 @@ footer {
         font-size: 1.5rem;
     }
 
+    /* TITLE w NAV / BUTTONS */
+    #sm-title {
+        font-size: 2.5rem;
+    }
+
+    #sm-subtitle {
+        font-size: 1rem;
+    }
+
     /* LOGIN / SIGN-UP / BUTTONS */
     .h3-title {
         font-size: 1.8rem;
@@ -693,28 +702,27 @@ footer {
         width: 30%;
     }
 
-    /* TITLE w NAV / BUTTONS */
-    #sm-title {
-        font-size: 2.5rem;
-    }
-
-    #sm-subtitle {
-        font-size: 1rem;
-    }
-
     /* HOME */
     #logout,
     #home {
         font-size: .85rem;
     }
 
+    .home-info {
+        width: 100%;
+    }
+
     #unlink-spotify-btn {
         margin-top: 5%;
+        font-size: .62rem;
+        padding-left: 2%;
+        padding-right: 2%;
     }
 
     #view-playlists,
     #gen-playlist {
         font-size: 1rem;
+        width: 50%;
     }
 
     /* VIEW PLAYLISTS */
@@ -740,6 +748,10 @@ footer {
     #enter-name {
         width: 65%;
         font-size: 1rem;
+    }
+
+    #add-name-btn {
+        margin-top: 1%;
     }
 
     /* GENERATE PLAYLIST */
@@ -797,6 +809,11 @@ footer {
     }
 
     /* HOME */
+    .home-info {
+        margin-top: 40%;
+        width: 70%;
+    }
+
     #unlink-spotify-btn {
         margin-top: 5%;
     }
@@ -804,7 +821,7 @@ footer {
     #view-playlists,
     #gen-playlist {
         font-size: 1.1rem;
-        width: 80%;
+        width: 70%;
     }
 
     /* VIEW PLAYLISTS */
@@ -856,18 +873,26 @@ footer {
     #pass-input {
         font-size: 1.2rem;
     }
+
     #login,
     #sign-up {
         font-size: 1.2rem;
         width: 20%;
     }
+
     #back-link {
         font-size: 1.1rem;
     }
 
     /* HOME */
+    .home-info {
+        margin-top: 35%;
+        width: 50%;
+    }
+
     #unlink-spotify-btn {
         margin-top: 3%;
+        width: 75%;
     }
 
     #view-playlists,
@@ -936,11 +961,21 @@ footer {
         font-size: 1.2rem;
         width: 15%;
     }
+
     #back-link {
         font-size: 1.2rem;
     }
 
     /* HOME */
+    .home-info {
+        margin-top: 30%;
+        width: 50%;
+    }
+
+    #unlink-spotify-btn {
+        width: 65%;
+    }
+
     #view-playlists,
     #gen-playlist {
         font-size: 1.3rem;

@@ -5,6 +5,7 @@ import Message from '../components/Message';
 import { useQuery } from '@apollo/client';
 import { GET_USER } from '../utils/queries';
 import Auth from '../utils/auth';
+import Footer from '../components/Footer';
 
 export default function Home() {
     const [showAlert, setShowAlert] = useState(false);
@@ -69,6 +70,7 @@ export default function Home() {
             </div>
             <LinkSpotify />
             {showAlert && <Message onClose={closeAlert} />}
+            <Footer />
         </div>
     );
 }

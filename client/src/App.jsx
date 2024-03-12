@@ -47,7 +47,6 @@ const App = () => {
         <PlaylistProvider>
           <main>
             <Outlet />
-            <Footer />
           </main>
         </PlaylistProvider>
       </TokenProvider>
