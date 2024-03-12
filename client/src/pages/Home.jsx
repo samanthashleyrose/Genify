@@ -2,17 +2,20 @@ import React, { useState, useEffect } from 'react';
 import LinkSpotify from '../components/LinkSpotify';
 import { Link } from 'react-router-dom';
 import Message from '../components/Message';
-
+import { useQuery } from '@apollo/client';
+import { GET_USER } from '../utils/queries';
 import Auth from '../utils/auth';
 
 export default function Home() {
     const [showAlert, setShowAlert] = useState(false);
 
+    // Query to get current user's username
+    const {loading, data} = useQuery(GET_USER);
+
     // Handles logging out a user
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
-
     }
     // Message displays informing user they must link their spotify account before they can generate a playlist
     const linkSpotifyAlertForGenPlaylist = (event) => {
@@ -57,7 +60,7 @@ export default function Home() {
                 <Link to="/"><button id="logout" onClick={logout}>logout</button></Link>
             </div>
             <div className='home-info'>
-                <h3 className='h3-title'>Welcome</h3>
+                <h3 className='h3-title'>Welcome, {data?.me?.username}</h3>
                 <div className="btn-container">
                     <Link to="/ViewPlaylists"><button id='view-playlists' onClick={linkSpotifyAlertForViewPlaylist}>view playlists</button></Link>
                     <br />

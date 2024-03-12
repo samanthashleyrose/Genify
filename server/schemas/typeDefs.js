@@ -18,7 +18,7 @@ const typeDefs = `#graphql
   }
 
   type Query {
-    getUser: User!
+    me: User
   }
 
   type Mutation {
