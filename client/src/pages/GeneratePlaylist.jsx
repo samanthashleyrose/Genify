@@ -4,6 +4,7 @@ import HeaderwithNav from '../components/TitlewithNav';
 import Cookies from 'js-cookie'
 import { useMutation } from '@apollo/client';
 import { CREATE_PLAYLIST } from '../utils/mutations';
+import spotifyLogo from '../assets/imgs/spotify-logo.png'
 
 export default function GeneratePlaylist() {
 
@@ -118,7 +119,7 @@ export default function GeneratePlaylist() {
                 {playlist ? (
                     <div className="playlists-container">
                         <div className="generated-playlist">
-                            <img src="../src/assets/imgs/spotify-logo.png" alt="Spotify Logo" className='playlist-img' />
+                            <img src={spotifyLogo} className='playlist-img' />
                             <h4 className='playlist-name'>{playlistData.playlistName}</h4>
                         </div>
                     </div>
