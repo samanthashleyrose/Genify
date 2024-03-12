@@ -71,7 +71,11 @@ Upon revisiting your Spotify account, you'll discover the curated playlist waiti
 ## Future Development
 **Integration of Cover Images:** Enhance user experience by enabling the addition of custom cover images to generated playlists, adding a personalized touch to the listening experience.
 
-**MongoDB Integration for Playlist Management:** Implement MongoDB integration to store each generated playlist, enabling efficient management and retrieval of playlist data. Additionally, the View Playlist page will showcase only the curated "Genify" playlist.
+**Hidden Genres:** Make the user experience more streamlined by only showing 10 random genres with a "View All Genres" button placed below. This will allow the Select Genres page to be more clean and simplified. 
+
+**Playlist Hyperlink to Spotify:** Generated playlist names will be a hyperlink, redirecting the user to their Spotify Account where the playlist is located and listenable. 
+
+**MongoDB Integration for Playlist Management:** The View Playlist page will showcase *only* the curated "Genify" playlist.
 
 ## How to Contribute
 If you are to come across any problems while using <a href="https://genify-18f212542b9b.herokuapp.com/">Genify</a>, feel free to open a new issue or submit a pull request through this repository. Your feedback and contributions are welcomed.
