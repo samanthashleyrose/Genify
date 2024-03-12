@@ -33,7 +33,7 @@ export default function LinkSpotify() {
         : (
           <div id="link-spotify-container">
             <SpotifyAuth
-              redirectUri="https://genify-18f212542b9b.herokuapp.com/Home"
+              redirectUri={import.meta.env.PROD ? "https://genify-18f212542b9b.herokuapp.com/Home" : "http://localhost:3027/Home"}
               clientID="4b830f668f7c43af93ed803df35930bc"
               scopes={[
                 Scopes.userReadPrivate,

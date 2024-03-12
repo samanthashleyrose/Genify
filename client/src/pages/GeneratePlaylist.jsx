@@ -2,12 +2,16 @@ import React, { useEffect, useContext, useState } from 'react';
 import { PlaylistContext } from './PlaylistContext';
 import HeaderwithNav from '../components/TitlewithNav';
 import Cookies from 'js-cookie'
+import { useMutation } from '@apollo/client';
+import { CREATE_PLAYLIST } from '../utils/mutations';
 
 export default function GeneratePlaylist() {
 
     const [token] = React.useState(Cookies.get("spotifyAuthToken"));
     const { playlistData } = useContext(PlaylistContext);
     const [playlist, setPlaylist] = useState();
+
+    const [createPlaylist, { data }] = useMutation(CREATE_PLAYLIST);
 
     // Retrieves connected user's Spotify username
     const fetchUserId = async () => {
@@ -88,6 +92,13 @@ export default function GeneratePlaylist() {
 
             // Update the UI with the generated playlist details
             setPlaylist(playlistDataResponse);
+            createPlaylist(
+                {
+                    variables: {
+                        spotify_id: playlistDataResponse.id,
+                        name: playlistDataResponse.name,
+                    }
+                })
         } catch (error) {
             console.error('Error generating playlist:', error);
         }

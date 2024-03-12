@@ -33,8 +33,8 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    createPlaylist: async (parent, { spotify_id, name, tracks, owner }) => {
-      const playlist = await Playlist.create({ spotify_id, name, tracks, owner});
+    createPlaylist: async (parent, { spotify_id, name}, context) => {
+      const playlist = await Playlist.create({ spotify_id, name, owner: context.user._id});
       
       return playlist;
     }
