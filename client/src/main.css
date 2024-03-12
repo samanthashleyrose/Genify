@@ -130,6 +130,10 @@ body {
     width: 20%;
 }
 
+a {
+    text-decoration: none;
+}
+
 #back-link {
     font-size: 1rem;
     color: var(--text-gray);
@@ -886,7 +890,7 @@ footer {
 
     /* HOME */
     .home-info {
-        margin-top: 35%;
+        margin-top: 25%;
         width: 50%;
     }
 
@@ -968,7 +972,7 @@ footer {
 
     /* HOME */
     .home-info {
-        margin-top: 30%;
+        margin-top: 15%;
         width: 50%;
     }
 
