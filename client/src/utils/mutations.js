@@ -30,15 +30,12 @@ export const LOGIN_USER = gql`
 `;
 
 export const CREATE_PLAYLIST = gql`
-  mutation createPlaylist($spotify_id: String!, $name: String!, $tracks: String!, $owner: ID!) {
-    createPlaylist(spotify_id: $spotify_id, name: $name, tracks: $tracks, owner: $owner) {
-      playlist {
+  mutation createPlaylist($spotify_id: String!, $name: String!) {
+    createPlaylist(spotify_id: $spotify_id, name: $name) {
       _id
       spotify_id
       name
-      tracks
       owner
-      }
     }
   }
 `;
